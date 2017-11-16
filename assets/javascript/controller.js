@@ -46,7 +46,7 @@ var controller = {
 
 			searchWord = $('#word-input').val().trim();
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&limit=5"
+	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&limit=12"
 
 
 		$.ajax({
@@ -64,7 +64,10 @@ var controller = {
 	      	for (var i = 0; i < giphyResults.length; i++) {
 
 	      		var gifImage = $('<img>')
-	      		gifImage.attr("src", giphyResults[i].images.fixed_height.url);
+	      		var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
+	      		console.log(randomGif);
+	      		gifImage.attr("src", randomGif.images.fixed_height.url);
+	      		$('#noun-01').html(gifImage);
 
 	      	}
 

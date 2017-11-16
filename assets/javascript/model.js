@@ -16,3 +16,29 @@
  In (month), a woman was charged with a similar crime. 
  But rather than (verb), a with a (noun), she (verb, past tense) with a (adjective) dog. 
  Either way, we imagine that after witnessing him (verb) with a (noun) there are probably a whole lot of (plural noun) that are going to need some therapy.*/
+
+
+var badLibs = [
+
+	{
+		badLibs1: 
+			[
+			{
+			sentence: "(Proper noun) had a history of (verb), but no one - not even his (noun) - ever imagined he’d (verb) with a (noun) stuck in his (body part)."
+			terms: ["proper noun", "verb", "(noun)", "(verb)", "(noun)", "(body part)"]
+			},
+			{
+			sentence: "(Proper noun) had a history of (verb), but no one - not even his (noun) - ever imagined he’d (verb) with a (noun) stuck in his (body part)."
+			terms: ["proper noun", "verb", "(noun)", "(verb)", "(noun)", "(body part)"]
+			},
+			{
+			sentence: "(Proper noun) had a history of (verb), but no one - not even his (noun) - ever imagined he’d (verb) with a (noun) stuck in his (body part)."
+			terms: ["proper noun", "verb", "(noun)", "(verb)", "(noun)", "(body part)"]
+			},
+			{
+			sentence: "(Proper noun) had a history of (verb), but no one - not even his (noun) - ever imagined he’d (verb) with a (noun) stuck in his (body part)."
+			terms: ["proper noun", "verb", "(noun)", "(verb)", "(noun)", "(body part)"]
+			},
+		],
+	}
+]
