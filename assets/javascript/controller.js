@@ -30,10 +30,22 @@ var controller = {
 	      	// loop through results to parse out what we want to display from the api
 	      	for (var i = 0; i < giphyResults.length; i++) {
 
+	      		var gifImage = $('<img>')
+	      		gifImage.attr("src", giphyResults[i].images.fixed_height.url);
+
 	      	}
 
 
 	      });
 	},
+
+	termButtonClicked: () => {
+		$("body").on("click", ".next-term-button", function() {
+			searchWord = $(this).text();
+
+			controller.searchGiphy();
+		});
+	},
+
 
 }; //end of controller object
