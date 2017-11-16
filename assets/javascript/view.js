@@ -5,6 +5,6 @@
 $(document).ready(function(){
 
 	// input whatever needs to happen when the page loads
-
+	controller.termButtonClicked();
 
 });
