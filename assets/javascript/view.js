@@ -6,5 +6,7 @@ $(document).ready(function(){
 
 	// input whatever needs to happen when the page loads
 	controller.termButtonClicked();
+	//console.log(badLibs);
+	//console.log(badLibs.badLibs1[0].searchedTerms[0].term);
 
 });

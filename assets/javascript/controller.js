@@ -45,8 +45,11 @@ var controller = {
 			event.preventDefault();
 
 			searchWord = $('#word-input').val().trim();
+			// push the searchWord into the term array with the choosen badLibs object for the current sentence
+			badLibs.badLibs1[0].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&limit=12"
+	        console.log(badLibs.badLibs1[0].searchedTerms[0].term);
 
 
 		$.ajax({
@@ -60,16 +63,21 @@ var controller = {
 	      	// console log the results
 	      	console.log(giphyResults)
 
+	      	var gifImage = $('<img>')
+      		var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
+      		console.log(randomGif);
+      		gifImage.attr("src", randomGif.images.fixed_height.url);
+      		$('#noun-01').html(gifImage);
+      		//gifImageSrc = $('#noun-01').attr('src')
+      		badLibs.badLibs1[0].searchedTerms[0].gif.push(randomGif);
+      		console.log(badLibs.badLibs1[0].searchedTerms[0].gif);
+
 	      	// loop through results to parse out what we want to display from the api
-	      	for (var i = 0; i < giphyResults.length; i++) {
+	      	// for (var i = 0; i < giphyResults.length; i++) {
 
-	      		var gifImage = $('<img>')
-	      		var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
-	      		console.log(randomGif);
-	      		gifImage.attr("src", randomGif.images.fixed_height.url);
-	      		$('#noun-01').html(gifImage);
 
-	      	}
+
+	      	// }
 
 	      })
 
