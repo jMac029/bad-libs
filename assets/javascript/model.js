@@ -4,6 +4,8 @@
 // Global Variables
 
  var searchWord;
+ var counter = 0;
+ var searchTermCounter = 0;
 
 //Creating a variable for each sentence in the Mad Lib
  var sentence01 = "A <span id='noun-01'></span> in Kentucky was arrested this morning after he <span id='verb-01'></span> in front of a house." 
@@ -22,8 +24,8 @@ var badLibs = {
 
 		badLibs1: [
 			{
-			sentence: "<span class='term' id='celeberity'></span> had a history of <span class='term' id='verb'></span>, but no one - not even his <span class='term' id='noun'></span> - ever imagined he’d <span class='term' id='verb'></span> with a <span class='term' id='noun'></span> stuck in his <span class='term' id='body-part'></span>.",
-			termsToSearch: ["celeberity", "verb", "noun", "verb", "noun", "body part"],
+			sentence: "<span id='term0' class='celebrity'></span> had a history of <span id='term1' class='verb'></span>, but no one - not even his <span id='term2' class='noun'></span> - ever imagined he/she had <span id='term3' class='verb'></span> with a <span id='term4' class='noun'></span> stuck in his <span id='term5' class='body-part'></span>.",
+			termsToSearch: ["celebrity", "verb", "noun", "verb", "noun", "body part"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
