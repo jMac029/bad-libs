@@ -32,14 +32,19 @@ var view = {
 		$('.user-term-inputs').hide()
 		var badLibSentence = badLibs.badLibs1[0].sentence
 		var gifs = badLibs.badLibs1[0].searchedTerms[0].gif
+		var term = badLibs.badLibs1[0].searchedTerms[0].term
 		console.log(gifs)
+		$('.bad-lib-display').append(badLibSentence);
 		for (var i = 0; i < searchTermCounter-1; i++) {
-			let gifImage = $('<img>')
-
+			var gifImage = $('<img>')
+			//$('.term').attr('id', 'term'+[i])
 			gifImage.attr("src", gifs[i].images.fixed_height.url);
-			console.log(gifImage)
-			$('#term'+ i).html(gifImage);
-			$('.bad-lib-display').html(badLibSentence);
+			gifImage.text(term[i])
+			$('.term'+i).html(gifImage);
+			//console.log(term)
+			//$('.bad-lib-display').append(gifImage);
+			//console.log(gifImage)
+			//$('.bad-lib-display').html(badLibSentence);
 		}
 		
 		
