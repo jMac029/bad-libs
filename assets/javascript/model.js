@@ -9,7 +9,6 @@
 
 //Creating a variable for each sentence in the Mad Lib
  var sentence01 = "A <span id='noun-01'></span> in Kentucky was arrested this morning after he <span id='verb-01'></span> in front of a house." 
- var noun01 = ""
 
 
  /*(Proper noun) had a history of (verb), but no one - not even his (noun) - ever imagined he’d (verb) with a (noun) stuck in his (body part). 
@@ -24,7 +23,7 @@ var badLibs = {
 
 		badLibs1: [
 			{
-			sentence: "<span id='term0' class='celebrity'></span> had a history of <span id='term1' class='verb'></span>, but no one - not even his <span id='term2' class='noun'></span> - ever imagined he/she had <span id='term3' class='verb'></span> with a <span id='term4' class='noun'></span> stuck in his <span id='term5' class='body-part'></span>.",
+			sentence: "<div id='sentence'> <span class='term0' id='celebrity'></span>had a history of <span class='term1' id='verb'></span>, but no one - not even his <span class='term2' id='noun'></span> - ever imagined he/she had <span class='term3' id='verb'></span> with a <span class='term4' id='noun'></span> stuck in his <span class='term5' id='body-part'></span>.</div>",
 			termsToSearch: ["celebrity", "verb", "noun", "verb", "noun", "body part"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
