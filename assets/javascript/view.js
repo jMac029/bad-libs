@@ -6,7 +6,8 @@ $(document).ready(function(){
 
 	// input whatever needs to happen when the page loads
 	controller.termButtonClicked();
-	//console.log(badLibs);
+	controller.selectRandomBadLib();
+	//console.log(badLibsArray);
 	//console.log(badLibs.badLibs1[0].searchedTerms[0].term);
 	//view.displayTermInputs();
 	controller.loopTermsToSearchForInput();
@@ -30,17 +31,19 @@ var view = {
 
 	displayBadLib: () => {
 		$('.user-term-inputs').hide()
-		var badLibSentence = badLibs.badLibs1[0].sentence
-		var gifs = badLibs.badLibs1[0].searchedTerms[0].gif
-		var term = badLibs.badLibs1[0].searchedTerms[0].term
+		var badLibSentence = randomBadLib[badLibIndex].sentence
+		// var termsToSearch = badLibs.badLibs1[0].termsToSearch
+		var gifs = randomBadLib[badLibIndex].searchedTerms[0].gif
+		var terms = randomBadLib[badLibIndex].searchedTerms[0].term
 		console.log(gifs)
+		// searchTermCounter--
 		$('.bad-lib-display').append(badLibSentence);
-		for (var i = 0; i < searchTermCounter-1; i++) {
-			var gifImage = $('<img>')
-			//$('.term').attr('id', 'term'+[i])
+		for (var i = 0; i < searchTermCounter; i++) {
+			var gifImage = $('<img>');
+			//$('.term').attr('id', 'term'+i);
 			gifImage.attr("src", gifs[i].images.fixed_height.url);
-			gifImage.text(term[i])
-			$('.term'+i).html(gifImage);
+			gifImage.attr("alt", terms[i]);
+			$('#term'+i).html(gifImage);
 			//console.log(term)
 			//$('.bad-lib-display').append(gifImage);
 			//console.log(gifImage)
