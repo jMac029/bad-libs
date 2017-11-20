@@ -15,10 +15,10 @@ var controller = {
 
 			searchWord = $('#word-input').val().trim();
 			// push the searchWord into the term array with the choosen badLibs object for the current sentence
-			badLibs.badLibs1[0].searchedTerms[0].term.push(searchWord)
+			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&limit=12"
-	        console.log(badLibs.badLibs1[0].searchedTerms[0].term);
+	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
+	        console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
 	        searchTermCounter++
 	        console.log(searchTermCounter)
 
@@ -40,8 +40,9 @@ var controller = {
       		//gifImage.attr("src", randomGif.images.fixed_height.url);
       		//$('#noun-01').html(gifImage);
       		//gifImageSrc = $('#noun-01').attr('src')
-      		badLibs.badLibs1[0].searchedTerms[0].gif.push(randomGif);
-      		console.log(badLibs.badLibs1[0].searchedTerms[0].gif);
+      		randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif);
+      		//badLibs.badLibs1[0].searchedTerms[0].gif.push(giphyResults);
+      		console.log(randomBadLib[badLibIndex].searchedTerms[0].gif);
 	      	// loop through results to parse out what we want to display from the api
 	      	// for (var i = 0; i < giphyResults.length; i++) {
 
@@ -53,10 +54,25 @@ var controller = {
        	  	controller.loopTermsToSearchForInput();
 		});
 	},
+	// select a random BadLib when starting a game
+	selectRandomBadLib: () => {
+		choosenBadLib = badLibsArray[Math.floor(Math.random() * badLibsArray.length)]
+		randomBadLib = choosenBadLib.badLib
+		console.log(randomBadLib);
+
+		for (var i = 0; i < randomBadLib.length; i++) {
+			allTermsCounter = randomBadLib[i].termsToSearch[i].length
+			console.log("allTermsCounter")
+			console.log(allTermsCounter)
+		}
+		
+	},
+
 	loopTermsToSearchForInput: () => {
-		var searchTerms = badLibs.badLibs1[0].termsToSearch;
+		var searchTerms = randomBadLib[badLibIndex].termsToSearch;
 		console.log(searchTerms);
 
+		
 		if (searchTermCounter <= searchTerms.length) {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
 		}	else {
