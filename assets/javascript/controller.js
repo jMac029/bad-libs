@@ -20,6 +20,7 @@ var controller = {
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
 	        console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
 	        searchTermCounter++
+	        console.log(searchTermCounter)
 
 
 		$.ajax({
@@ -51,7 +52,6 @@ var controller = {
 
 	      	})
        	  	controller.loopTermsToSearchForInput();
-			console.log(searchTermCounter)
 		});
 	},
 	// select a random BadLib when starting a game
@@ -75,9 +75,15 @@ var controller = {
 		
 		if (searchTermCounter <= searchTerms.length) {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
-		} else {
+		}	else {
 			view.displayBadLib();
 		}
+
+		/*else if (searchTermCounter >= searchTerms.length) {
+			view.displayBadLib();
+		}*/
+	
+
 
 		//for (var i = 0; i < searchTerms.length; i++) {
 		//	console.log(searchTerms[i]);
