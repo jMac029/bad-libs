@@ -20,6 +20,7 @@ var controller = {
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&limit=12"
 	        console.log(badLibs.badLibs1[0].searchedTerms[0].term);
 	        searchTermCounter++
+	        console.log(searchTermCounter)
 
 
 		$.ajax({
@@ -50,7 +51,6 @@ var controller = {
 
 	      	})
        	  	controller.loopTermsToSearchForInput();
-			console.log(searchTermCounter)
 		});
 	},
 	loopTermsToSearchForInput: () => {
@@ -59,10 +59,15 @@ var controller = {
 
 		if (searchTermCounter <= searchTerms.length) {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
-		}
-		if ( searchTermCounter >= searchTerms.length) {
+		}	else {
 			view.displayBadLib();
 		}
+
+		/*else if (searchTermCounter >= searchTerms.length) {
+			view.displayBadLib();
+		}*/
+	
+
 
 		//for (var i = 0; i < searchTerms.length; i++) {
 		//	console.log(searchTerms[i]);

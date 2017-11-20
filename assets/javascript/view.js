@@ -35,13 +35,13 @@ var view = {
 		var term = badLibs.badLibs1[0].searchedTerms[0].term
 		console.log(gifs)
 		$('.bad-lib-display').append(badLibSentence);
-		for (var i = 0; i < searchTermCounter-1; i++) {
+		for (var i = 0; i <= searchTermCounter+1; i++) {
 			var gifImage = $('<img>')
+			console.log(i)
 			//$('.term').attr('id', 'term'+[i])
 			gifImage.attr("src", gifs[i].images.fixed_height.url);
 			gifImage.text(term[i])
 			$('.term'+i).html(gifImage);
-			//console.log(term)
 			//$('.bad-lib-display').append(gifImage);
 			//console.log(gifImage)
 			//$('.bad-lib-display').html(badLibSentence);
