@@ -9,7 +9,7 @@ var controller = {
 	// variables to use within the controller object
 
 	termButtonClicked: () => {
-		$("body").on("click", ".input-term-button", function() {
+		$("body").on("click", ".input-term-button", function () {
 
 			event.preventDefault();
 
@@ -18,40 +18,40 @@ var controller = {
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-			console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
-			searchTermCounter++;
-	       
+      console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
+	    searchTermCounter++
+	    console.log("searchTermCounter: " + searchTermCounter)
+	    termCounter++
+	    console.log("termCounter: " + termCounter)
 
 
-		$.ajax({
-	        url: queryURL,
-	        method: "GET"
-	      	}).done(function(giphyResponse) {
+			$.ajax({
+				url: queryURL,
+				method: "GET"
+			}).done(function (giphyResponse) {
 
-	      	// declare JSON output into a results variable for easier use
-	      	var giphyResults = giphyResponse.data
+				// declare JSON output into a results variable for easier use
+				var giphyResults = giphyResponse.data
 
-	      	// console log the results
-	      	//console.log(giphyResults)
+				// console log the results
+				//console.log(giphyResults)
 
-	      	// var gifImage = $('<img>')
-      		var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
-      		//console.log(randomGif);
-      		//gifImage.attr("src", randomGif.images.fixed_height.url);
-      		//$('#noun-01').html(gifImage);
-      		//gifImageSrc = $('#noun-01').attr('src')
-      		randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif);
-      		//badLibs.badLibs1[0].searchedTerms[0].gif.push(giphyResults);
-      		console.log(randomBadLib[badLibIndex].searchedTerms[0].gif);
-	      	// loop through results to parse out what we want to display from the api
-	      	// for (var i = 0; i < giphyResults.length; i++) {
+				// var gifImage = $('<img>')
+				var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
+				//console.log(randomGif);
+				//gifImage.attr("src", randomGif.images.fixed_height.url);
+				//$('#noun-01').html(gifImage);
+				//gifImageSrc = $('#noun-01').attr('src')
+				randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif);
+				//badLibs.badLibs1[0].searchedTerms[0].gif.push(giphyResults);
+				console.log(randomBadLib[badLibIndex].searchedTerms[0].gif);
+				// loop through results to parse out what we want to display from the api
+				// for (var i = 0; i < giphyResults.length; i++) {
 
-
-
-	      	// }
+				// }
 
 	      	})
-       	  	controller.loopTermsToSearchForInput();
+	      	controller.loopTermsToSearchForInput();
 		});
 	},
 	// select a random BadLib when starting a game
@@ -65,30 +65,24 @@ var controller = {
 		}
 		console.log("allTermsCounterTOTAL")
 		console.log(allTermsCounter)
-		
-		
 	},
 
 	loopTermsToSearchForInput: () => {
-		for (var i = 0; i < randomBadLib.length; i++) {
-			searchTerms = randomBadLib[i].termsToSearch;
-			console.log(searchTerms);
-		}
-		console.log(i);
+		var searchTerms = randomBadLib[badLibIndex].termsToSearch;
+		console.log(searchTerms);
 
-		console.log(searchTermCounter);
-		if (searchTermCounter < allTermsCounter) {
+		
+		if (searchTermCounter < searchTerms.length) {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
-		}	else {
+		} else if (termCounter == allTermsCounter){
+			badLibIndex = 0;
 			view.displayBadLib();
+		} else if (searchTermCounter >= searchTerms.length) {
+			badLibIndex++
+			searchTermCounter = 0;
+			controller.loopTermsToSearchForInput();
 		}
-
-		/*else if (searchTermCounter >= searchTerms.length) {
-			view.displayBadLib();
-		}*/
-	
-
-
+		
 		//for (var i = 0; i < searchTerms.length; i++) {
 		//	console.log(searchTerms[i]);
 			/*if (searchTermCounter % searchTerms.length) {
@@ -101,7 +95,7 @@ var controller = {
 	},
 
 	textToSpeech: (text) => {
-		responsiveVoice.speak(text, "US English Female", {rate: .5});
+		responsiveVoice.speak(text, "US English Female", {rate: 1});
 	}
 
 
