@@ -51,7 +51,7 @@ var view = {
 		//responsiveVoice.setDefaultVoice("US English Female");
 		//responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .5});
 		controller.textToSpeech($('#sentence').text())
-		for (var i = 0; i < gifs.length; i++) {
+		for (var i = 0; i <= gifs.length; i++) {
 			console.log(i)
 			var gifImage = $('<img>');
 			//$('.term').attr('id', 'term'+i);
@@ -65,6 +65,15 @@ var view = {
 			//$('.bad-lib-display').html(badLibSentence);
 		}
 		
+	},
+
+	nextSentenceButtonClicked: () => {
+		$('body').on('click', '.next-sentence-button', function () {
+			$('.bad-lib-display').empty();
+			$('#sentence').empty();
+			badLibIndex++;
+			view.displayBadLib();
+		}
 	}
 
 
