@@ -18,9 +18,9 @@ var controller = {
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-	        console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
-	        searchTermCounter++
-	        console.log(searchTermCounter)
+			console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
+			searchTermCounter++;
+	       
 
 
 		$.ajax({
@@ -70,11 +70,14 @@ var controller = {
 	},
 
 	loopTermsToSearchForInput: () => {
-		var searchTerms = randomBadLib[badLibIndex].termsToSearch;
-		console.log(searchTerms);
+		for (var i = 0; i < randomBadLib.length; i++) {
+			searchTerms = randomBadLib[i].termsToSearch;
+			console.log(searchTerms);
+		}
+		console.log(i);
 
-		
-		if (searchTermCounter <= searchTerms.length) {
+		console.log(searchTermCounter);
+		if (searchTermCounter < allTermsCounter) {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
 		}	else {
 			view.displayBadLib();

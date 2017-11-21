@@ -38,11 +38,14 @@ var view = {
 		var terms = randomBadLib[badLibIndex].searchedTerms[0].term
 		console.log(gifs)
 		// searchTermCounter--
-		$('.bad-lib-display').html(badLibSentence);
+		console.log(terms);
+		$('.bad-lib-display').append(badLibSentence);
 		//responsiveVoice.setDefaultVoice("US English Female");
 		//responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .5});
 		controller.textToSpeech($('#sentence').text())
 		for (var i = 0; i < searchTermCounter; i++) {
+      console.log(terms[i]);
+			console.log(gifs)
 			var gifImage = $('<img>');
 			//$('.term').attr('id', 'term'+i);
 			gifImage.attr("src", gifs[i].images.fixed_height.url);
