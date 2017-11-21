@@ -17,10 +17,12 @@ var controller = {
 			// push the searchWord into the term array with the choosen badLibs object for the current sentence
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-				searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-			console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
-			searchTermCounter++;
-
+	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
+      console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
+	    searchTermCounter++
+	    console.log("searchTermCounter: " + searchTermCounter)
+	    termCounter++
+	    console.log("termCounter: " + termCounter)
 
 
 			$.ajax({
@@ -46,12 +48,10 @@ var controller = {
 				// loop through results to parse out what we want to display from the api
 				// for (var i = 0; i < giphyResults.length; i++) {
 
-
-
 				// }
 
-			})
-			controller.loopTermsToSearchForInput();
+	      	})
+	      	controller.loopTermsToSearchForInput();
 		});
 	},
 	// select a random BadLib when starting a game
@@ -65,44 +65,37 @@ var controller = {
 		}
 		console.log("allTermsCounterTOTAL")
 		console.log(allTermsCounter)
-
-
 	},
 
 	loopTermsToSearchForInput: () => {
-		for (var i = 0; i < randomBadLib.length; i++) {
-			searchTerms = randomBadLib[i].termsToSearch;
-			console.log(searchTerms);
+		var searchTerms = randomBadLib[badLibIndex].termsToSearch;
+		console.log(searchTerms);
 
-			console.log(i);
-
-			console.log(searchTermCounter);
-			if (searchTermCounter < allTermsCounter) {
-				view.displayTermInputs(searchTerms[searchTermCounter]);
-			} else {
-				view.displayBadLib();
-			}
-		}
-
-		/*else if (searchTermCounter >= searchTerms.length) {
+		
+		if (searchTermCounter < searchTerms.length) {
+			view.displayTermInputs(searchTerms[searchTermCounter]);
+		} else if (termCounter == allTermsCounter){
+			badLibIndex = 0;
 			view.displayBadLib();
-		}*/
-
-
-
+		} else if (searchTermCounter >= searchTerms.length) {
+			badLibIndex++
+			searchTermCounter = 0;
+			controller.loopTermsToSearchForInput();
+		}
+		
 		//for (var i = 0; i < searchTerms.length; i++) {
 		//	console.log(searchTerms[i]);
-		/*if (searchTermCounter % searchTerms.length) {
-			var placeholderText = searchTerms[i];
-			console.log(searchTerms[i])
-			view.displayTermInputs(searchTerms[i]);
-		}*/
+			/*if (searchTermCounter % searchTerms.length) {
+				var placeholderText = searchTerms[i];
+				console.log(searchTerms[i])
+				view.displayTermInputs(searchTerms[i]);
+			}*/
 		//}
 
 	},
 
 	textToSpeech: (text) => {
-		responsiveVoice.speak(text, "US English Female", { rate: .5 });
+		responsiveVoice.speak(text, "US English Female", {rate: 1});
 	}
 
 
