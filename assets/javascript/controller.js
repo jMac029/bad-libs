@@ -18,10 +18,11 @@ var controller = {
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-			console.log(randomBadLib[badLibIndex].searchedTerms[0].term);
-			searchTermCounter++;
-	       
-
+      console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
+	        searchTermCounter++
+	        console.log("searchTermCounter: " + searchTermCounter)
+	        termCounter++
+	        console.log("termCounter: " + termCounter)
 
 		$.ajax({
 	        url: queryURL,
@@ -51,7 +52,7 @@ var controller = {
 	      	// }
 
 	      	})
-       	  	controller.loopTermsToSearchForInput();
+	      	controller.loopTermsToSearchForInput();
 		});
 	},
 	// select a random BadLib when starting a game
@@ -63,32 +64,27 @@ var controller = {
 		for (var i = 0; i < randomBadLib.length; i++) {
 			allTermsCounter = randomBadLib[i].termsToSearch.length + allTermsCounter
 		}
-		console.log("allTermsCounterTOTAL")
-		console.log(allTermsCounter)
+		console.log("allTermsCounterTOTAL: " + allTermsCounter)
 		
 		
 	},
 
 	loopTermsToSearchForInput: () => {
-		for (var i = 0; i < randomBadLib.length; i++) {
-			searchTerms = randomBadLib[i].termsToSearch;
-			console.log(searchTerms);
-		}
-		console.log(i);
+		var searchTerms = randomBadLib[badLibIndex].termsToSearch;
+		console.log(searchTerms);
 
-		console.log(searchTermCounter);
-		if (searchTermCounter < allTermsCounter) {
+		
+		if (searchTermCounter < searchTerms.length) {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
-		}	else {
+		} else if (termCounter == allTermsCounter){
+			badLibIndex = 0;
 			view.displayBadLib();
+		} else if (searchTermCounter >= searchTerms.length) {
+			badLibIndex++
+			searchTermCounter = 0;
+			controller.loopTermsToSearchForInput();
 		}
-
-		/*else if (searchTermCounter >= searchTerms.length) {
-			view.displayBadLib();
-		}*/
-	
-
-
+		
 		//for (var i = 0; i < searchTerms.length; i++) {
 		//	console.log(searchTerms[i]);
 			/*if (searchTermCounter % searchTerms.length) {
@@ -101,7 +97,7 @@ var controller = {
 	},
 
 	textToSpeech: (text) => {
-		responsiveVoice.speak(text, "US English Female", {rate: .5});
+		responsiveVoice.speak(text, "US English Female", {rate: 1});
 	}
 
 
