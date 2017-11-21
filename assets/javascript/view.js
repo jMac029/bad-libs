@@ -37,8 +37,11 @@ var view = {
 		var terms = randomBadLib[badLibIndex].searchedTerms[0].term
 		console.log(gifs)
 		// searchTermCounter--
+		console.log(terms);
 		$('.bad-lib-display').append(badLibSentence);
-		for (var i = 0; i < searchTermCounter; i++) {
+		for (var i = 0; i < terms.length; i++) {
+			console.log(terms[i]);
+			console.log(gifs)
 			var gifImage = $('<img>');
 			//$('.term').attr('id', 'term'+i);
 			gifImage.attr("src", gifs[i].images.fixed_height.url);
