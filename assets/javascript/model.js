@@ -29,7 +29,8 @@ var badLibsArray = [
 		{ title: "In The News",
 		  badLib: [
 			{
-			sentence: "<div id='sentence'>A <span class='gif' id='term0' data='animal'></span> in Kentucky was arrested this morning after he <span class='gif' id='term1' data='verb'></span> in front of a house.</div>",
+			sentence: "<div id='sentence'>A <span class='gif' id='term0' data='animal'></span>in Kentucky was arrested this morning after he <span class='gif' id='term1' data='verb'></span> in front of a house.</div>",
+			//speechSentence: "A " + badLibsArray[0].badLib[0].termsToSearch[0] + " in Kentucky was arrested this morning after he " + badLibsArray[0].badLib[0].termsToSearch[1] + " in front of a house.",
 			termsToSearch: ["animal", "verb"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
