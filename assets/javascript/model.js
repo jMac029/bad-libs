@@ -11,6 +11,7 @@
  var termCounter = 0;
  var allTermsCounter = 0;
  var authorName;
+ var searchTerms = 0;
 
 //Creating a variable for each sentence in the Mad Lib
  var sentence01 = "A <span id='noun-01'></span> in Kentucky was arrested this morning after he <span id='verb-01'></span> in front of a house." 
