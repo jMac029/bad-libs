@@ -44,7 +44,7 @@ var view = {
 		//responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .5});
 		controller.textToSpeech($('#sentence').text())
 		for (var i = 0; i < searchTermCounter; i++) {
-      console.log(terms[i]);
+      		console.log(terms[i]);
 			console.log(gifs)
 			var gifImage = $('<img>');
 			//$('.term').attr('id', 'term'+i);
