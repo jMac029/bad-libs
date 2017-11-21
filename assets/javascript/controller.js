@@ -89,6 +89,10 @@ var controller = {
 			}*/
 		//}
 
+	},
+
+	textToSpeech: (text) => {
+		responsiveVoice.speak(text, "US English Female", {rate: .5});
 	}
 
 
