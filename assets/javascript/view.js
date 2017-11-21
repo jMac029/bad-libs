@@ -37,15 +37,15 @@ var view = {
 		// var termsToSearch = badLibs.badLibs1[0].termsToSearch
 		var gifs = randomBadLib[badLibIndex].searchedTerms[0].gif
 		var terms = randomBadLib[badLibIndex].searchedTerms[0].term
-		console.log("gifs: " + gifs)
+		console.log(gifs)
 		// searchTermCounter--
-		var nextSentenceButton = "<button class='next-sentence-button' value='next Sentence in Bad Lib'</button>"
+		var nextSentenceButton = "<input class='next-sentence-button' type='submit' value='next Sentence in Bad Lib'</button>"
 		$('.bad-lib-display').append(badLibSentence);
 		$('.bad-lib-display').append(nextSentenceButton)
 		//responsiveVoice.setDefaultVoice("US English Female");
 		//responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .5});
 		controller.textToSpeech($('#sentence').text())
-		for (var i = 0; i < gifs.length; i++) {
+		for (var i = 0; i <= gifs.length; i++) {
 			console.log(i)
 			var gifImage = $('<img>');
 			//$('.term').attr('id', 'term'+i);
@@ -59,6 +59,15 @@ var view = {
 			//$('.bad-lib-display').html(badLibSentence);
 		}
 		
+	},
+
+	nextSentenceButtonClicked: () => {
+		$('body').on('click', '.next-sentence-button', function () {
+			$('.bad-lib-display').empty();
+			$('#sentence').empty();
+			badLibIndex++;
+			view.displayBadLib();
+		}
 	}
 
 

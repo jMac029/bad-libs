@@ -18,11 +18,11 @@ var controller = {
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-      console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
-	    searchTermCounter++
-	    console.log("searchTermCounter: " + searchTermCounter)
-	    termCounter++
-	    console.log("termCounter: " + termCounter)
+      		console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
+	    	searchTermCounter++
+	    	console.log("searchTermCounter: " + searchTermCounter)
+	    	termCounter++
+	    	console.log("termCounter: " + termCounter)
 
 
 			$.ajax({
@@ -34,7 +34,7 @@ var controller = {
 				var giphyResults = giphyResponse.data
 
 				// console log the results
-				//console.log(giphyResults)
+				console.log(giphyResults)
 
 				// var gifImage = $('<img>')
 				var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
@@ -49,10 +49,10 @@ var controller = {
 				// for (var i = 0; i < giphyResults.length; i++) {
 
 				// }
-
+				controller.loopTermsToSearchForInput();
 	      	})
-	      	controller.loopTermsToSearchForInput();
 		});
+		
 	},
 	// select a random BadLib when starting a game
 	selectRandomBadLib: () => {
