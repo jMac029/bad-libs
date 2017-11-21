@@ -9,7 +9,7 @@ var controller = {
 	// variables to use within the controller object
 
 	termButtonClicked: () => {
-		$("body").on("click", ".input-term-button", function() {
+		$("body").on("click", ".input-term-button", function () {
 
 			event.preventDefault();
 
@@ -19,37 +19,36 @@ var controller = {
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
       console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
-	        searchTermCounter++
-	        console.log("searchTermCounter: " + searchTermCounter)
-	        termCounter++
-	        console.log("termCounter: " + termCounter)
-
-		$.ajax({
-	        url: queryURL,
-	        method: "GET"
-	      	}).done(function(giphyResponse) {
-
-	      	// declare JSON output into a results variable for easier use
-	      	var giphyResults = giphyResponse.data
-
-	      	// console log the results
-	      	//console.log(giphyResults)
-
-	      	// var gifImage = $('<img>')
-      		var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
-      		//console.log(randomGif);
-      		//gifImage.attr("src", randomGif.images.fixed_height.url);
-      		//$('#noun-01').html(gifImage);
-      		//gifImageSrc = $('#noun-01').attr('src')
-      		randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif);
-      		//badLibs.badLibs1[0].searchedTerms[0].gif.push(giphyResults);
-      		console.log(randomBadLib[badLibIndex].searchedTerms[0].gif);
-	      	// loop through results to parse out what we want to display from the api
-	      	// for (var i = 0; i < giphyResults.length; i++) {
+	    searchTermCounter++
+	    console.log("searchTermCounter: " + searchTermCounter)
+	    termCounter++
+	    console.log("termCounter: " + termCounter)
 
 
+			$.ajax({
+				url: queryURL,
+				method: "GET"
+			}).done(function (giphyResponse) {
 
-	      	// }
+				// declare JSON output into a results variable for easier use
+				var giphyResults = giphyResponse.data
+
+				// console log the results
+				//console.log(giphyResults)
+
+				// var gifImage = $('<img>')
+				var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
+				//console.log(randomGif);
+				//gifImage.attr("src", randomGif.images.fixed_height.url);
+				//$('#noun-01').html(gifImage);
+				//gifImageSrc = $('#noun-01').attr('src')
+				randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif);
+				//badLibs.badLibs1[0].searchedTerms[0].gif.push(giphyResults);
+				console.log(randomBadLib[badLibIndex].searchedTerms[0].gif);
+				// loop through results to parse out what we want to display from the api
+				// for (var i = 0; i < giphyResults.length; i++) {
+
+				// }
 
 	      	})
 	      	controller.loopTermsToSearchForInput();
@@ -64,9 +63,8 @@ var controller = {
 		for (var i = 0; i < randomBadLib.length; i++) {
 			allTermsCounter = randomBadLib[i].termsToSearch.length + allTermsCounter
 		}
-		console.log("allTermsCounterTOTAL: " + allTermsCounter)
-		
-		
+		console.log("allTermsCounterTOTAL")
+		console.log(allTermsCounter)
 	},
 
 	loopTermsToSearchForInput: () => {
