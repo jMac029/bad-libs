@@ -61,10 +61,11 @@ var controller = {
 		console.log(randomBadLib);
 
 		for (var i = 0; i < randomBadLib.length; i++) {
-			allTermsCounter = randomBadLib[i].termsToSearch[i].length
-			console.log("allTermsCounter")
-			console.log(allTermsCounter)
+			allTermsCounter = randomBadLib[i].termsToSearch.length + allTermsCounter
 		}
+		console.log("allTermsCounterTOTAL")
+		console.log(allTermsCounter)
+		
 		
 	},
 
@@ -94,6 +95,10 @@ var controller = {
 			}*/
 		//}
 
+	},
+
+	textToSpeech: (text) => {
+		responsiveVoice.speak(text, "US English Female", {rate: .5});
 	}
 
 
