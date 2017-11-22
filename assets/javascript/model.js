@@ -11,7 +11,7 @@
  var badLibIndex = 0;
  var termCounter = 0;
  var allTermsCounter = 0;
- var authorName = "author";
+ var authorName = "";
  var searchTerms = 0;
 
 //Creating a variable for each sentence in the Mad Lib
@@ -89,7 +89,31 @@ var badLibsArray = [
 			termsToSearch: ["plural noun", "noun"],
 			searchedTerms: [{ term: [], gif: []}]
 			}
-		]}
+		]},
+
+		{ title: "Afriad of the Dark",
+            badLib: [
+            {
+            sentence: "<div id='sentence'>I was home alone and scared out of my <span class='gif' id='term0' data='plural-noun'></span>. I could hear the wind <span class='gif' id='term1' data='verb-ing'></span>, and off in the distance a <span class='gif' id='term2' data='noun'></span> was howling. </div>",
+            termsToSearch: ["plural noun", "verb ending in -ing", "noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>I crossed the room, locked the <span class='gif' id='term0' data='noun'></span>, and climbed into bed, pulling the <span class='gif' id='term1' data='plural-noun'></span> over my <span class='gif' id='term2' data='body-part'></span>. </div>",
+            termsToSearch: ["noun", "plural noun", "body part"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>My <span class='gif' id='term0' data='body-part'></span> started to chatter and my knees began <span class='gif' id='term1' data='verb-ing'></span>. The <span class='gif' id='term2' data='noun'></span> was thrust open and there was a huge <span class='gif' id='term3' data='noun'></span> with hair all over his <span class='gif' id='term4' data='body-part'></span> </div>",
+            termsToSearch: ["body part", "verb ending in -ing", "noun", "noun", "body part"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>It was my father. \"Hi, we\'re home,\" he said <span class='gif' id='term0' data='adverb'></span>. \"Hope you weren\'t afraid of staying home alone.\" \"No,\" I said, lying through my <span class='gif' id='term1' data='body-part'></span> </div>",
+            termsToSearch: ["adverb", "body part"],
+            searchedTerms: [{ term: [], gif: []}]
+            }
+        ]}
 
 
 ];
