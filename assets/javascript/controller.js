@@ -8,8 +8,22 @@ var controller = {
 
 	// variables to use within the controller object
 
+	startBadLibButtonClicked: () => {
+		$("#start-badlib-button").on("click", function () {
+			event.preventDefault();
+			authorName = $('#author-input').val().trim();
+			if (authorName == "") {
+				authorName = "An Author has no name";
+			}
+			console.log(authorName);
+			//controller.termButtonClicked();
+			controller.selectRandomBadLib();
+			controller.loopTermsToSearchForInput();
+		});
+	},
+
 	termButtonClicked: () => {
-		$("body").on("click", ".input-term-button", function () {
+		$(".input-term-button").on("click", function () {
 
 			event.preventDefault();
 
@@ -18,7 +32,7 @@ var controller = {
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-	      console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
+	      	console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
 		    searchTermCounter++
 		    console.log("searchTermCounter: " + searchTermCounter)
 		    termCounter++
@@ -57,8 +71,8 @@ var controller = {
 	},
 	// select a random BadLib when starting a game
 	selectRandomBadLib: () => {
-		choosenBadLib = badLibsArray[Math.floor(Math.random() * badLibsArray.length)]
-		randomBadLib = choosenBadLib.badLib
+		chosenBadLib = badLibsArray[Math.floor(Math.random() * badLibsArray.length)]
+		randomBadLib = chosenBadLib.badLib
 		console.log(randomBadLib);
 
 		for (var i = 0; i < randomBadLib.length; i++) {
@@ -77,6 +91,7 @@ var controller = {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
 		} else if (termCounter == allTermsCounter){
 			badLibIndex = 0;
+			view.displayBadLibHeader();
 			view.displayBadLib();
 		} else if (searchTermCounter >= searchTerms.length) {
 			badLibIndex++

@@ -5,11 +5,13 @@
 $(document).ready(function(){
 
 	// input whatever needs to happen when the page loads
-	controller.termButtonClicked();
-	controller.nextSentenceButtonClicked();
-	controller.selectRandomBadLib();
-	controller.loopTermsToSearchForInput();
-	console.log("badLibsArray: " + badLibsArray);
+	view.displayWelcomeScreen();
+	//controller.startBadLibButtonClicked();
+	//controller.termButtonClicked();
+	//controller.nextSentenceButtonClicked();
+	//controller.selectRandomBadLib();
+	//controller.loopTermsToSearchForInput();
+	//console.log("badLibsArray: " + badLibsArray);
 	//console.log(badLibs.badLibs1[0].searchedTerms[0].term);
 	//view.displayTermInputs();
 
@@ -18,17 +20,46 @@ $(document).ready(function(){
 // view object for manipulation of the view with JS and jQuery
 var view = {
 
-	displayTermInputs: (term) => {
-		var inputForm = $('<form>').addClass('user-inputs')
-		var inputHtml = "<label for='term-input'>Enter a " + term + "</label>" +
-						"<input type='text' id='word-input'>" +
-						"<!-- Submit Button -->" +
-	    				"<input class='input-term-button' type='submit' value='Submit " + term + "'>"
+	displayWelcomeScreen: () => {
+		var welcomeScreenHtml = 
+			"<div class='cell medium-10 text-center'>" +
+	                "<div class='cell small-6 float-center' style='margin: 50px 0 50px 0'>" +
+	                  "<label>Who is this?</label>" +
+	                  "<input type='text' class='cell small-6 float-center' id='author-input' placeholder='type in your name'/>" +
+	                "</div>" +
+	              "<input class='button large secondary' type='submit' id='start-badlib-button' value='Start Your Story'>" +
+	            "</div>" +
+          	"</div>"
+        $('.welcome-screen').append(welcomeScreenHtml);
+        controller.startBadLibButtonClicked();
 
+	},
+
+	displayTermInputs: (term) => {
+		// var inputForm = $('<form>').addClass('user-inputs')
+		var wordCounter = termCounter + 1
+		var inputHtml = 
+			"<div class='cell medium-10 text-center'>" +
+            	"<div class='cell small-6 float-center' style='margin: 50px 0 50px 0'>" +
+				"<label for='word-input'>" + term + "</label>" +
+				"<input type='text' class='cell small-6 float-center' id='word-input'>" +
+				"</div>" +
+				"<!-- Submit Button -->" +
+				"<input class='input-term-button button large primary' type='submit' value='Submit " + term + "'>" +
+				"<p id='counter'> word " + wordCounter + " of " + allTermsCounter + "</p>" +
+			"</div>"
+
+	    $('.welcome-screen').hide()
 	    $('.user-term-inputs').empty()
-	    inputForm.html(inputHtml)
-	    $('.user-term-inputs').append(inputForm)
+	    $('.user-term-inputs').append(inputHtml)
+	    controller.termButtonClicked();
 	    // searchTermCounter++
+	},
+
+	displayBadLibHeader: () => {
+		var badLibTitle = "<h1>" + chosenBadLib.title + "</h1>"
+		var badLibAuthor = "<h3> by " + authorName + "</h3>"
+		$('.story-display').prepend(badLibTitle, badLibAuthor);
 	},
 
 	displayBadLib: () => {
@@ -43,15 +74,16 @@ var view = {
 		var nextSentenceButton = "<input class='next-sentence-button' type='submit' value='next Sentence in Bad Lib'>"
 		var allDone = "<input class='all-done-button' type='submit' value='all done Bad Lib'>"
 		$('.bad-lib-display').append(badLibSentence);
-		if (badLibIndex < randomBadLib.length) {
+		if (badLibIndex <= randomBadLib.length) {
 			$('#sentence').append(nextSentenceButton)
-		} else if ( badLibIndex == randomBadLib.length) {
+		} else if ( badLibIndex > randomBadLib.length) {
 			$('#sentence').append(allDone)
 		}
 		//responsiveVoice.setDefaultVoice("US English Female");
 		//responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .5});
 		controller.textToSpeech($('#sentence').text())
-		for (var i = 0; i <= gifs.length; i++) {
+		controller.nextSentenceButtonClicked();
+		for (var i = 0; i < gifs.length; i++) {
 			console.log(i)
 			var gifImage = $('<img>');
 			//$('.term').attr('id', 'term'+i);
