@@ -65,16 +65,6 @@ var view = {
 			//$('.bad-lib-display').html(badLibSentence);
 		}
 		
-	},
-
-	nextSentenceButtonClicked: () => {
-		$('body').on('click', '.next-sentence-button', function () {
-			$('.bad-lib-display').empty();
-			$('#sentence').empty();
-			badLibIndex++;
-			view.displayBadLib();
-		}
 	}
-
 
 }
