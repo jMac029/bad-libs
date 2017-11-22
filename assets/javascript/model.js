@@ -6,11 +6,12 @@
  var searchWord;
  var counter = 0;
  var searchTermCounter = 0;
+ var chosenBadLib;
  var randomBadLib;
  var badLibIndex = 0;
  var termCounter = 0;
  var allTermsCounter = 0;
- var authorName;
+ var authorName = "author";
  var searchTerms = 0;
 
 //Creating a variable for each sentence in the Mad Lib
