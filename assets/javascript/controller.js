@@ -9,7 +9,7 @@ var controller = {
 	// variables to use within the controller object
 
 	startBadLibButtonClicked: () => {
-		$("#start-badlib-button").on("click", function () {
+		$("#start-badlib-button").click( function (event) {
 			event.preventDefault();
 			authorName = $('#author-input').val().trim();
 			if (authorName == "") {
@@ -23,10 +23,8 @@ var controller = {
 	},
 
 	termButtonClicked: () => {
-		$(".input-term-button").on("click", function () {
-
+		$(".input-term-button").click(function (event) {
 			event.preventDefault();
-
 			searchWord = $('#word-input').val().trim();
 			// push the searchWord into the term array with the choosen badLibs object for the current sentence
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
@@ -115,7 +113,7 @@ var controller = {
 	},
 
 	nextSentenceButtonClicked: () => {
-		$("body").on("click", ".next-sentence-button", function () {
+		$(".next-sentence-button").click(function () {
 			$('.bad-lib-display').empty();
 			$('#sentence').empty();
 			badLibIndex++;
