@@ -31,28 +31,28 @@ var badLibsArray = [
 		{ title: "In The News",
 		  badLib: [
 			{
-			sentence: "<div id='sentence'>A <span class='gif' id='term0' data='animal'></span>in Kentucky was arrested this morning after he <span class='gif' id='term1' data='verb'></span> in front of a house.</div>",
-			termsToSearch: ["animal", "verb"],
+			sentence: "<div id='sentence'>A <span class='gif' id='term0' data='animal'></span> in Kentucky was arrested this morning after he <span class='gif' id='term1' data='adverb'></span> in front of a house.</div>",
+			termsToSearch: ["animal", "adverb"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'> <span class='gif' id='term0' data='celebrity'></span>had a history of <span class='gif' id='term1' data='verb'></span>, but no one - not even his/hers <span class='gif' id='term2' data='noun'></span> - ever imagined he/she had <span class='gif' id='term3' data='verb'></span> with a <span class='gif' id='term4' data='noun'></span> stuck in his/hers <span class='gif' id='term5' data='body-part'></span>.</div>",
+			sentence: "<div id='sentence'> <span class='gif' id='term0' data='celebrity'></span> had a history of <span class='gif' id='term1' data='verb'></span>, but no one, not even his or her <span class='gif' id='term2' data='noun'></span> - ever imagined he or she had <span class='gif' id='term3' data='verb'></span> with a <span class='gif' id='term4' data='noun'></span> stuck in his or her <span class='gif' id='term5' data='body-part'></span>.</div>",
 			termsToSearch: ["celebrity", "verb", "noun", "verb", "noun", "body part"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'>I always thought he/she was <span class='gif' id='term0' data='adjective'></span>, but I never thought he/she would do something like this. Even his/her <span class='gif' id='term1' data='family-member'></span> was surprised.</div>",
+			sentence: "<div id='sentence'>I always thought he or she was <span class='gif' id='term0' data='adjective'></span>, but I never thought he or she would do something like this. Even his or her <span class='gif' id='term1' data='family-member'></span> was surprised.</div>",
 			termsToSearch: ["adjective", "family-member"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'>After a brief <span class='gif' id='term0' data='activity'></span>, cops followed him/her to a <span class='gif' id='term1' data='fast-food-restaurant'></span>, where he/she reportedly <span class='gif' id='term2' data='adjective-past-tense'></span> in the fry machine.</div>",
-			termsToSearch: ["activity", "fast food restaurant", "past tense adjective"],
+			sentence: "<div id='sentence'>After a brief <span class='gif' id='term0' data='verb-ing'></span>, cops followed him or her to a <span class='gif' id='term1' data='fast-food-restaurant'></span>, where he or she reportedly <span class='gif' id='term2' data='adverb'></span> in the deep fryer.</div>",
+			termsToSearch: ["verb ending in -ing", "fast food restaurant", "adverb"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'>In <span class='gif' id='term0' data='month'></span>, a woman was charged with a similar crime. But rather than <span class='gif' id='term1' data='verb'></span>, a with a <span class='gif' id='term2' data='noun'></span>, she <span class='gif' id='term3' data='verb-past-tense'></span> with a <span class='gif' id='term4' data='adjective'></span> dog.</div>",
-			termsToSearch: ["month", "verb", "noun", "past tense verb", "adjective"],
+			sentence: "<div id='sentence'>In <span class='gif' id='term0' data='month'></span>, a woman was charged with a similar crime. But rather than <span class='gif' id='term1' data='verb'></span>, a with a <span class='gif' id='term2' data='noun'></span>, she <span class='gif' id='term3' data='verb-past-tense'></span> with a <span class='gif' id='term4' data='adverb'></span> dog.</div>",
+			termsToSearch: ["month", "verb", "noun", "past tense verb", "adverb"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{

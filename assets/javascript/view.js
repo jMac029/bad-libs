@@ -53,10 +53,10 @@ var view = {
 				//"<p id='counter'> word " + wordCounter + " of " + allTermsCounter + "</p>" +
 			"</form>" +
 			"</div>"
-		$('input').focus();
 	    $('.welcome-screen').hide()
 	    $('.user-term-inputs').empty()
 	    $('.user-term-inputs').append(inputHtml)
+	    $('input').focus();
 	    controller.termButtonClicked();
 	    // searchTermCounter++
 	},
