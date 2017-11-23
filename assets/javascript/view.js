@@ -98,7 +98,7 @@ var view = {
 			gifImage.prepend(terms[i]);
 			$('#term'+i).html(gifImage);
 			if (i == gifs.length) {
-				return controller.textToSpeech();
+				controller.textToSpeech();
 			};
 		}
 		
