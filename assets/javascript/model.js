@@ -113,7 +113,37 @@ var badLibsArray = [
             termsToSearch: ["adverb", "body part"],
             searchedTerms: [{ term: [], gif: []}]
             }
-        ]}
+        ]},
+
+        { title: "Personal Ad",
+            badLib: [
+            {
+            sentence: "<div id='sentence'>I enjoy long, <span class='gif' id='term0' data='adjective'></span> walks on the beach, getting <span class='gif' id='term1' data='verb-past-tense'></span> in the rain and serendipitous encounters with <span class='gif' id='term2' data='plural-noun'></span>.</div>",
+            termsToSearch: ["adjective", "past tense verb", "plural noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>I really like piña coladas mixed with <span class='gif' id='term0' data='beverage'></span>, and romantic, candle-lit <span class='gif' id='term1' data='plural-noun'></span>. I am well-read from Dr. Seuss to <span class='gif' id='term2' data='famous-person'></span>. </div>",
+            termsToSearch: ["beverage", "plural noun", "famous person"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'> I travel frequently, especially to <span class='gif' id='term0' data='place'></span>, when I am not busy with work. (I am a <span class='gif' id='term1' data='occupation'></span>.) I am looking for <span class='gif' id='term2' data='noun'></span> and beauty in the form of a <span class='gif' id='term3' data='nationality'></span> goddess. </div>",
+            termsToSearch: ["place", "occupation", "noun", "nationality"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>She should have the physique of <span class='gif' id='term0' data='female-famous-person'></span> and the <span class='gif' id='term1' data='body-part'></span> of <span class='gif' id='term2' data='male-famous-person'></span>. I would prefer if she knew how to cook, clean, and wash my <span class='gif' id='term3' data='plural-noun'></span>. </div>",
+            termsToSearch: ["female famous person", "body part", "male famous person", "plural noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>I know I’m not very attractive in my picture, but it was taken in <span class='gif' id='term0' data='year'></span>, and I have since become more <span class='gif' id='term1' data='adverb'></span>. </div>",
+            termsToSearch: ["year", "adverb"],
+            searchedTerms: [{ term: [], gif: []}]
+            }
+        ]},
+
 
 
 ];
