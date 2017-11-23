@@ -89,6 +89,7 @@ var view = {
 		//responsiveVoice.setDefaultVoice("US English Female");
 		//responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .5});
 		controller.nextSentenceButtonClicked();
+		// controller.textToSpeech();
 		for (var i = 0; i < gifs.length; i++) {
 			// console.log(i)
 			var gifImage = $('<img>');
@@ -96,13 +97,10 @@ var view = {
 			gifImage.attr("title", terms[i]);
 			gifImage.prepend(terms[i]);
 			$('#term'+i).html(gifImage);
-			if (i === gifs.length) {
-				var speechSentence = $('#sentence').text()
-				console.log(speechSentence)
-				return controller.textToSpeech(speechSentence)
-			}
+			if (i == gifs.length) {
+				controller.textToSpeech();
+			};
 		}
-		//controller.textToSpeech(speechSentence)
 		
 	}
 
