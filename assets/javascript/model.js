@@ -144,7 +144,29 @@ var badLibsArray = [
             }
         ]},
 
-
+        { title: "Romeo and Juliet: Prologue",
+            badLib: [
+            {
+            sentence: "<div id='sentence'>Two <span class='gif' id='term0' data='plural-noun'></span>, both alike in dignity, <br> In fair <span class='gif' id='term1' data='place'></span>, where we lay our scene, <br> From ancient <span class='gif' id='term2' data='noun'></span> break to new mutiny, <br> Where civil blood makes civil hands unclean.</div>",
+            termsToSearch: ["plural noun", "place", "noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>From forth the fatal loins of these two foes <br> A pair of star-cross`d <span class='gif' id='term0' data='plural-noun'></span> take their life; <br> Whole misadventured piteous overthrows <br> Do with their <span class='gif' id='term1' data='noun'></span> bury their parents` strife.</div>",
+            termsToSearch: ["plural noun", "noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>The fearful passage of their <span class='gif' id='term0' data='adjective'></span> love, <br> And the continuance of their parents` rage, <br> Which, but their children`s end, nought could <span class='gif' id='term1' data='verb'></span>, <br> Is now the <span class='gif' id='term2' data='number'></span> hours` traffic of our stage;</div>",
+            termsToSearch: ["adjective", "verb", "number"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>The which if you with <span class='gif' id='term0' data='adjective'></span> <span class='gif' id='term1' data='body-part'></span> attend, <br> What here shall <span class='gif' id='term2' data='verb'></span>, our toil shall strive to mend.</div>",
+            termsToSearch: ["adjective", "body part", "verb"],
+            searchedTerms: [{ term: [], gif: []}]
+            }
+        ]}
 
 ];
 
