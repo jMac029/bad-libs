@@ -76,13 +76,15 @@ var view = {
 		var terms = randomBadLib[badLibIndex].searchedTerms[0].term
 		console.log(gifs)
 		// searchTermCounter--
-		var nextSentenceButton = "<input class='hollow button next-sentence-button' type='submit' value='next Sentence in Bad Lib'>"
-		var allDone = "<input class='hollow button all-done-button' type='submit' value='all done Bad Lib'>"
+		var nextSentenceButton = "<div class='cell small-6 float-center'><button class='hollow button next-sentence-button'>next Sentence in Bad Lib</button></div>"
+		var allDone = "<div class='cell small-6 float-center'><button class='hollow button all-done-button'>all done</button></div>"
 		$('.bad-lib-display').append(badLibSentence);
-		if (badLibIndex <= randomBadLib.length) {
-			$('#sentence').append(nextSentenceButton)
-		} else if ( badLibIndex > randomBadLib.length) {
-			$('#sentence').append(allDone)
+		if ( badLibIndex < randomBadLib.length ) {
+			$('.bad-lib-display').append(nextSentenceButton)
+		} 
+		// still working on getting this to work
+		if ( badLibIndex === randomBadLib.length ) {
+			$('.bad-lib-display').append(allDone)
 		}
 		//var speechSentence = $('#sentence').text()
 		//console.log(speechSentence)
@@ -91,16 +93,13 @@ var view = {
 		controller.nextSentenceButtonClicked();
 		// controller.textToSpeech();
 		for (var i = 0; i < gifs.length; i++) {
-			// console.log(i)
 			var gifImage = $('<img>');
 			gifImage.attr("src", gifs[i].images.fixed_height.url);
 			gifImage.attr("title", terms[i]);
+			//gifImage.text(terms[i]);
 			gifImage.prepend(terms[i]);
 			$('#term'+i).html(gifImage);
-			if (i == gifs.length) {
-				controller.textToSpeech();
-			};
-		}
+		} return controller.textToSpeech()
 		
 	}
 
