@@ -1,0 +1,56 @@
+/* 
+	This is where our own custom CSS will live 
+	in case we need to overwrite the CSS Framework we use
+
+*/
+
+
+body {
+		background-color: #F14D4F;
+		color: white;
+      	/*background: url(../images/madgiph-bg-red.png) no-repeat center center fixed;*/
+      	/*-webkit-background-size:cover;
+      	-moz-background-size:cover;
+      	-o-background-size:cover;
+      	background-size:cover;*/
+}
+
+/*transparent input field*/
+#author-input, #word-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  /*border-bottom: 1px solid #777;*/
+  text-align: center;
+} 
+
+.header, .nav, .footer {
+	text-align: center;
+}
+
+/* Diana Styling */
+/*body {
+    background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/free-lined-paper-texture.jpg");
+	background-size: cover;
+	font-size: 30px;
+}*/
+
+/*row:first-of-type*/
+#first {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#sans-serif {
+	font-family: 'Heebo', sans-serif;
+}
+
+#cursive {font-family: 'Crafty Girls', cursive;}
+
+.HandWriting {font-family: 'Crafty Girls', cursive;}
+
+#text {background-color: pink;}
