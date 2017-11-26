@@ -121,6 +121,12 @@ var controller = {
 			// searchTermCounter = 0
 			view.displayBadLib();
 		});
+	},
+	//Working on this
+	playAgainClicked: () => {
+		$(".play-again-button").click(function () {
+
+		}
 	}
 
 }; //end of controller object
