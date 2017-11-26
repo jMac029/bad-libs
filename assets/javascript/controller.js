@@ -8,17 +8,29 @@ var controller = {
 
 	// variables to use within the controller object
 
-	termButtonClicked: () => {
-		$("body").on("click", ".input-term-button", function () {
-
+	startBadLibButtonClicked: () => {
+		$("#start-badlib-button").click( function (event) {
 			event.preventDefault();
+			authorName = $('#author-input').val().trim();
+			if (authorName == "") {
+				authorName = "An Author has no name";
+			}
+			console.log(authorName);
+			//controller.termButtonClicked();
+			controller.selectRandomBadLib();
+			controller.loopTermsToSearchForInput();
+		});
+	},
 
+	termButtonClicked: () => {
+		$(".input-term-button").click(function (event) {
+			event.preventDefault();
 			searchWord = $('#word-input').val().trim();
 			// push the searchWord into the term array with the choosen badLibs object for the current sentence
 			randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 			var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
-	      console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
+	      	console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term);
 		    searchTermCounter++
 		    console.log("searchTermCounter: " + searchTermCounter)
 		    termCounter++
@@ -57,8 +69,8 @@ var controller = {
 	},
 	// select a random BadLib when starting a game
 	selectRandomBadLib: () => {
-		choosenBadLib = badLibsArray[Math.floor(Math.random() * badLibsArray.length)]
-		randomBadLib = choosenBadLib.badLib
+		chosenBadLib = badLibsArray[Math.floor(Math.random() * badLibsArray.length)]
+		randomBadLib = chosenBadLib.badLib
 		console.log(randomBadLib);
 
 		for (var i = 0; i < randomBadLib.length; i++) {
@@ -77,6 +89,7 @@ var controller = {
 			view.displayTermInputs(searchTerms[searchTermCounter]);
 		} else if (termCounter == allTermsCounter){
 			badLibIndex = 0;
+			view.displayBadLibHeader();
 			view.displayBadLib();
 		} else if (searchTermCounter >= searchTerms.length) {
 			badLibIndex++
@@ -95,12 +108,12 @@ var controller = {
 
 	},
 
-	textToSpeech: (text) => {
-		responsiveVoice.speak(text, "US English Female", {rate: 1});
+	textToSpeech: () => {
+		responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .8});
 	},
 
 	nextSentenceButtonClicked: () => {
-		$("body").on("click", ".next-sentence-button", function () {
+		$(".next-sentence-button").click(function () {
 			$('.bad-lib-display').empty();
 			$('#sentence').empty();
 			badLibIndex++;
