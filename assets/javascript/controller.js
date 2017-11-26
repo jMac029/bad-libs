@@ -108,8 +108,8 @@ var controller = {
 
 	},
 
-	textToSpeech: (text) => {
-		responsiveVoice.speak(text, "US English Female", {rate: 1});
+	textToSpeech: () => {
+		responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .8});
 	},
 
 	nextSentenceButtonClicked: () => {

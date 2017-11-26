@@ -91,7 +91,7 @@ var badLibsArray = [
 			}
 		]},
 
-		{ title: "Afriad of the Dark",
+		{ title: "Afraid of the Dark",
             badLib: [
             {
             sentence: "<div id='sentence'>I was home alone and scared out of my <span class='gif' id='term0' data='plural-noun'></span>. I could hear the wind <span class='gif' id='term1' data='verb-ing'></span>, and off in the distance a <span class='gif' id='term2' data='noun'></span> was howling. </div>",
@@ -113,8 +113,60 @@ var badLibsArray = [
             termsToSearch: ["adverb", "body part"],
             searchedTerms: [{ term: [], gif: []}]
             }
-        ]}
+        ]},
 
+        { title: "Personal Ad",
+            badLib: [
+            {
+            sentence: "<div id='sentence'>I enjoy long, <span class='gif' id='term0' data='adjective'></span> walks on the beach, getting <span class='gif' id='term1' data='verb-past-tense'></span> in the rain and serendipitous encounters with <span class='gif' id='term2' data='plural-noun'></span>.</div>",
+            termsToSearch: ["adjective", "past tense verb", "plural noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>I really like piña coladas mixed with <span class='gif' id='term0' data='beverage'></span>, and romantic, candle-lit <span class='gif' id='term1' data='plural-noun'></span>. I am well-read from Dr. Seuss to <span class='gif' id='term2' data='famous-person'></span>. </div>",
+            termsToSearch: ["beverage", "plural noun", "famous person"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'> I travel frequently, especially to <span class='gif' id='term0' data='place'></span>, when I am not busy with work. (I am a <span class='gif' id='term1' data='occupation'></span>.) I am looking for <span class='gif' id='term2' data='noun'></span> and beauty in the form of a <span class='gif' id='term3' data='nationality'></span> goddess. </div>",
+            termsToSearch: ["place", "occupation", "noun", "nationality"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>She should have the physique of <span class='gif' id='term0' data='female-famous-person'></span> and the <span class='gif' id='term1' data='body-part'></span> of <span class='gif' id='term2' data='male-famous-person'></span>. I would prefer if she knew how to cook, clean, and wash my <span class='gif' id='term3' data='plural-noun'></span>. </div>",
+            termsToSearch: ["female famous person", "body part", "male famous person", "plural noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>I know I’m not very attractive in my picture, but it was taken in <span class='gif' id='term0' data='year'></span>, and I have since become more <span class='gif' id='term1' data='adverb'></span>. </div>",
+            termsToSearch: ["year", "adverb"],
+            searchedTerms: [{ term: [], gif: []}]
+            }
+        ]},
+
+        { title: "Romeo and Juliet: Prologue",
+            badLib: [
+            {
+            sentence: "<div id='sentence'>Two <span class='gif' id='term0' data='plural-noun'></span>, both alike in dignity, <br> In fair <span class='gif' id='term1' data='place'></span>, where we lay our scene, <br> From ancient <span class='gif' id='term2' data='noun'></span> break to new mutiny, <br> Where civil blood makes civil hands unclean.</div>",
+            termsToSearch: ["plural noun", "place", "noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>From forth the fatal loins of these two foes <br> A pair of star-cross`d <span class='gif' id='term0' data='plural-noun'></span> take their life; <br> Whole misadventured piteous overthrows <br> Do with their <span class='gif' id='term1' data='noun'></span> bury their parents` strife.</div>",
+            termsToSearch: ["plural noun", "noun"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>The fearful passage of their <span class='gif' id='term0' data='adjective'></span> love, <br> And the continuance of their parents` rage, <br> Which, but their children`s end, nought could <span class='gif' id='term1' data='verb'></span>, <br> Is now the <span class='gif' id='term2' data='number'></span> hours` traffic of our stage;</div>",
+            termsToSearch: ["adjective", "verb", "number"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>The which if you with <span class='gif' id='term0' data='adjective'></span> <span class='gif' id='term1' data='body-part'></span> attend, <br> What here shall <span class='gif' id='term2' data='verb'></span>, our toil shall strive to mend.</div>",
+            termsToSearch: ["adjective", "body part", "verb"],
+            searchedTerms: [{ term: [], gif: []}]
+            }
+        ]}
 
 ];
 
