@@ -11,20 +11,22 @@
  var badLibIndex = 0;
  var termCounter = 0;
  var allTermsCounter = 0;
+ var sentenceCounter = 0;
  var authorName = "";
  var searchTerms = 0;
 
-//Creating a variable for each sentence in the Mad Lib
- var sentence01 = "A <span id='noun-01'></span> in Kentucky was arrested this morning after he <span id='verb-01'></span> in front of a house." 
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDy-LoCZBFI3byY029kxJbSzM-3CbPquaQ",
+    authDomain: "bad-libs-ab833.firebaseapp.com",
+    databaseURL: "https://bad-libs-ab833.firebaseio.com",
+    projectId: "bad-libs-ab833",
+    storageBucket: "",
+    messagingSenderId: "729741352036"
+  };
+  firebase.initializeApp(config);
 
-
- /*(Proper noun) had a history of (verb), but no one - not even his (noun) - ever imagined he’d (verb) with a (noun) stuck in his (body part). 
- \'I always thought he was (adjective), but i never thought he’d do something like this. Even his (relative) was surprised.'\ 
- After a brief (activity), cops followed him to a (fast food restaurant), where he reportedly (adjective, past tense) in the fry machine. 
- In (month), a woman was charged with a similar crime. 
- But rather than (verb), a with a (noun), she (verb, past tense) with a (adjective) dog. 
- Either way, we imagine that after witnessing him (verb) with a (noun) there are probably a whole lot of (plural noun) that are going to need some therapy.*/
-
+var database = firebase.database();
 
 var badLibsArray = [ 
 
@@ -91,7 +93,7 @@ var badLibsArray = [
 			}
 		]},
 
-		{ title: "Afriad of the Dark",
+		{ title: "Afraid of the Dark",
             badLib: [
             {
             sentence: "<div id='sentence'>I was home alone and scared out of my <span class='gif' id='term0' data='plural-noun'></span>. I could hear the wind <span class='gif' id='term1' data='verb-ing'></span>, and off in the distance a <span class='gif' id='term2' data='noun'></span> was howling. </div>",
