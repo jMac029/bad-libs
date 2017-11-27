@@ -25,10 +25,10 @@ var view = {
 			"<div class='cell medium-10 text-center'>" +
 				"<form>" +
 	                "<div class='cell small-6 float-center'>" +
-	                  "<label for='author-input'>what is your name?</label>" +
+	                  "<label for='author-input' id='author-question'>What is your name?</label>" +
 	                  "<input type='text' class='cell small-6 float-center' id='author-input' autofocus/>" +
 	                "</div>" +
-	              	"<button class='hollow button' id='start-badlib-button'>Begin Your Story</button>" +
+	              	"<button class='clear button' id='start-badlib-button'>Begin Your Story</button>" +
 	            "<form>" +
 	        "</div>"
 	    $('input').focus();
@@ -44,12 +44,12 @@ var view = {
 			"<div class='cell medium-10 text-center'>" +
 			"<form>" +
             	"<div class='cell small-6 float-center'>" +
-				"<label for='word-input'>word " + wordCounter + " of " + allTermsCounter + "</label>" +
-				"<label for='word-input'>" + term + "</label>" +
+				"<label for='word-input' id='word-question' >WORD " + wordCounter + " OF " + allTermsCounter + "</label>" +
+				"<label for='word-input' id='term-question'>" + term + "</label>" +
 				"<input type='text' class='cell small-6 float-center' id='word-input' autofocus/>" +
 				"</div>" +
 				"<!-- Submit Button -->" +
-				"<button class='input-term-button hollow button'>enter</button>" +
+				"<button class='input-term-button clear button'>enter</button>" +
 				//"<p id='counter'> word " + wordCounter + " of " + allTermsCounter + "</p>" +
 			"</form>" +
 			"</div>"
@@ -62,8 +62,8 @@ var view = {
 	},
 
 	displayBadLibHeader: () => {
-		var badLibTitle = "<h1>" + chosenBadLib.title + "</h1>"
-		var badLibAuthor = "<h3> by " + authorName + "</h3>"
+		var badLibTitle = "<h1 id='story-title'>" + chosenBadLib.title + "</h1>"
+		var badLibAuthor = "<h3 id='story-author'> by " + authorName + "</h3>"
 		$('.story-display').prepend(badLibTitle, badLibAuthor);
 	},
 

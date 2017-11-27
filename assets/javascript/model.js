@@ -91,7 +91,7 @@ var badLibsArray = [
 			}
 		]},
 
-		{ title: "Afriad of the Dark",
+		{ title: "Afraid of the Dark",
             badLib: [
             {
             sentence: "<div id='sentence'>I was home alone and scared out of my <span class='gif' id='term0' data='plural-noun'></span>. I could hear the wind <span class='gif' id='term1' data='verb-ing'></span>, and off in the distance a <span class='gif' id='term2' data='noun'></span> was howling. </div>",
