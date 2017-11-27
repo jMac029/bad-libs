@@ -81,6 +81,7 @@ var view = {
 		}
 		for (var i = 0; i < gifs.length; i++) {
 			var gifImage = $('<img>')
+			console.log(gifImage)
 			gifImage.attr("src", gifs[i].images.fixed_height.url)
 			gifImage.attr("title", terms[i])
 			//gifImage.text(terms[i]);
