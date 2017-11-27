@@ -63,7 +63,7 @@ var view = {
 		$('.user-term-inputs').hide()
 		var badLibSentence = randomBadLib[sentenceCounter].sentence
 		console.log("badLibSentence: " + badLibSentence)
-
+    
 		var gifs = randomBadLib[sentenceCounter].searchedTerms[0].gif
 		var terms = randomBadLib[sentenceCounter].searchedTerms[0].term
 		console.log("gifs: " + gifs)

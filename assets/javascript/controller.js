@@ -144,7 +144,7 @@ var controller = {
 			$('.user-term-inputs').show()
 			controller.selectRandomBadLib()
 			controller.loopTermsToSearchForInput()
-		})
-	}
+		});
+	},
 
 }; //end of controller object
