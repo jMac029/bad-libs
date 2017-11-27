@@ -29,7 +29,7 @@ var controller = {
 				searchWord = "blank"
 				randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 				var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-		        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
+		        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg-13&limit=12"
 		      	console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term)
 			    searchTermCounter++
 			    console.log("searchTermCounter: " + searchTermCounter)
@@ -54,7 +54,7 @@ var controller = {
 				// push the searchWord into the term array with the choosen badLibs object for the current sentence
 				randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 				var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-		        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg&limit=12"
+		        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg-13&limit=12"
 		      	console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term)
 			    searchTermCounter++
 			    console.log("searchTermCounter: " + searchTermCounter)
@@ -110,7 +110,7 @@ var controller = {
 	},
 
 	textToSpeech: () => {
-		responsiveVoice.speak($('#sentence').text(), "US English Female", {rate: .8})
+		responsiveVoice.speak($('#sentence').text(), "UK English Female", {rate: .8})
 	},
 
 	nextSentenceButtonClicked: () => {
@@ -139,8 +139,10 @@ var controller = {
 			allTermsCounter = 0
 			searchTerms = 0
 			randomBadLib = []
-			$('.story-display').empty()
+			$('#story-title').empty()
+			$('#story-author').empty()
 			$('.bad-lib-display').empty()
+			$('#sentence').empty()
 			$('.user-term-inputs').show()
 			controller.selectRandomBadLib()
 			controller.loopTermsToSearchForInput()
