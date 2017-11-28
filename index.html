@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Libs</title>
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crafty+Girls" rel="stylesheet">
@@ -21,7 +20,7 @@
     <div class="grid-container">
       <div class="grid-y" medium-grid-frame">
         <div class='cell small-6 float-center header'>
-          <img src="assets/images/badLibs-logo-white.png">
+          <img id="logo" src="assets/images/badlibs.png" alt="Badlibs Logo" width="650">
         </div>
         
           <div class="welcome-screen"></div>
@@ -43,6 +42,37 @@
         <div class="sharethis-inline-share-buttons"></div>
       
       </div>
+    </div>
+
+
+  <section class="modal-reveals">
+    
+    <div class="reveal" id="how-to-modal" data-reveal>
+      <h1>Awesome. I Have It.</h1>
+      <p class="lead">Your couch. It is mine.</p>
+      <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span> 
+      </button>
+    </div>
+
+    <p><button class="clear button float-center" data-open="how-to-modal">How to Play</button></p>
+
+
+    <div class="reveal" id="creator-modal" data-reveal>
+      <h1>Awesome. I Have It.</h1>
+      <p class="lead">Your couch. It is mine.</p>
+      <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span> 
+      </button>
+    </div>
+
+    <p><button class="clear button float-center" data-open="how-to-modal">The Creators</button></p>
+
+  </section>
+
+
   
         <!-- ResponsiveVoiceJS code -->
       <div class="cell small-6 float-center data-sticky-container footer">
