@@ -1,22 +1,18 @@
 /* 
 	This is where our own custom CSS will live 
 	in case we need to overwrite the CSS Framework we use
-
 */
 
-
 body {
-		background-color: #FFD700;
-		color: white;
-      	/*background: url(../images/madgiph-bg-red.png) no-repeat center center fixed;*/
-      	/*-webkit-background-size:cover;
-      	-moz-background-size:cover;
-      	-o-background-size:cover;
-      	background-size:cover;*/
+    background-color: #FFD700;
+    color: white;
 }
 
 /*transparent input field*/
 #author-input, #word-input {
+  font-family: 'Crafty Girls', cursive;
+  font-size: 24px;
+  color: #696969;
   border: none;
   outline: none;
   background: transparent;
@@ -27,6 +23,61 @@ body {
   text-align: center;
 } 
 
+#author-question, #term-question {
+  font-family: 'Heebo', sans-serif;
+  font-size: 24px;
+  color: #00BFFF;
+}
+
+#word-question {
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  color: #C0C0C0;
+
+}
+
+#start-badlib-button {
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+.input-term-button, .all-done-button, .next-sentence-button {
+  font-family: 'Heebo', sans-serif;
+  color: #C0C0C0;
+  font-size: 16px;
+}
+
+#story-title {
+  font-family: 'Heebo', sans-serif;
+  color: #00BFFF;
+  font-size: 42px;
+}
+
+#story-author {
+  font-family: 'Heebo', sans-serif;
+  color: #00BFFF;
+  font-size: 18px;
+}
+
+#sentence {
+  font-family: 'Work Sans', sans-serif;
+  color: #696969;
+  font-size: 48px;
+}
+
+#logo {
+  padding-bottom: 50px;
+}
+
+#how-to-modal {
+  color: black;
+}
+
+.header, .nav, .footer{
+  text-align: center;
+  
+}
 .header, .nav, .footer {
 	text-align: center;
 }
