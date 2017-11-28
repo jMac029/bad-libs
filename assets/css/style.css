@@ -1,15 +1,100 @@
 /* 
 	This is where our own custom CSS will live 
 	in case we need to overwrite the CSS Framework we use
-
 */
 
 
-.reveal {
+body {
+    background-color: #FFD700;
+    color: white;
+}
+
+/*transparent input field*/
+#author-input, #word-input {
+  font-family: 'Crafty Girls', cursive;
+  font-size: 24px;
+  color: #696969;
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  /*border-bottom: 1px solid #777;*/
+  text-align: center;
+} 
+
+#author-question, #term-question {
+  font-family: 'Heebo', sans-serif;
+  font-size: 24px;
+  color: #00BFFF;
+}
+
+#word-question {
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  color: #C0C0C0;
+
+}
+
+#start-badlib-button {
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+.input-term-button, .all-done-button, .next-sentence-button {
+  font-family: 'Heebo', sans-serif;
+  color: #C0C0C0;
+  font-size: 16px;
+}
+
+#story-title {
+  font-family: 'Heebo', sans-serif;
+  color: #00BFFF;
+  font-size: 42px;
+}
+
+#story-author {
+  font-family: 'Heebo', sans-serif;
+  color: #00BFFF;
+  font-size: 18px;
+}
+
+#sentence {
+  font-family: 'Work Sans', sans-serif;
+  color: #696969;
+  font-size: 48px;
+}
+
+#logo {
+  padding-bottom: 50px;
+}
+
+#how-to-modal {
+  color: black;
+}
+
+.header, .nav, .footer{
+  text-align: center;
+  
+}
+.header, .nav, .footer {
+	text-align: center;
+}
+
+.story-display, .bad-lib-display {
+	text-align: center;
+}
+
+/* Diana Styling */
+/*body {
+>>>>>>> master
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/free-lined-paper-texture.jpg");
 	background-size: cover;
 	font-size: 30px;
-}
+}*/
+
 /*row:first-of-type*/
 #first {
 	display: flex;
