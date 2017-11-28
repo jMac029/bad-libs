@@ -3,30 +3,18 @@
 
 // Global Variables
 
- var searchWord;
- var counter = 0;
- var searchTermCounter = 0;
- var chosenBadLib;
- var randomBadLib;
- var badLibIndex = 0;
- var termCounter = 0;
- var allTermsCounter = 0;
- var sentenceCounter = 0;
- var authorName = "";
- var searchTerms = 0;
+var searchWord
+var counter = 0
+var searchTermCounter = 0
+var chosenBadLib
+var randomBadLib
+var badLibIndex = 0
+var termCounter = 0
+var allTermsCounter = 0
+var sentenceCounter = 0
+var authorName = ""
+var searchTerms = 0
 
-// Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDy-LoCZBFI3byY029kxJbSzM-3CbPquaQ",
-    authDomain: "bad-libs-ab833.firebaseapp.com",
-    databaseURL: "https://bad-libs-ab833.firebaseio.com",
-    projectId: "bad-libs-ab833",
-    storageBucket: "",
-    messagingSenderId: "729741352036"
-  };
-  firebase.initializeApp(config);
-
-var database = firebase.database();
 
 var badLibsArray = [ 
 
