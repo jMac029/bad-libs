@@ -110,11 +110,11 @@ var controller = {
 	},
 
 	textToSpeech: () => {
-		responsiveVoice.speak($('#sentence').text(), "UK English Female", {rate: .8})
+			responsiveVoice.speak($('#sentence').text(), "UK English Female", {rate: .8})
 	},
 
 	nextSentenceButtonClicked: () => {
-		$(".next-sentence-button").click(function () {
+		$(".next-sentence-button").click(function() {
 			$('.bad-lib-display').empty()
 			$('#sentence').empty()
 			sentenceCounter++
@@ -122,10 +122,6 @@ var controller = {
 			// searchTermCounter = 0
 			view.displayBadLib()
 		})
-	},
-
-	restartGame: () => {
-
 	},
 
 	playGameAgainButtonClicked: () => {
