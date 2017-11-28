@@ -81,6 +81,10 @@ body {
 	text-align: center;
 }
 
+.story-display, .bad-lib-display {
+	text-align: center;
+}
+
 /* Diana Styling */
 /*body {
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/free-lined-paper-texture.jpg");
