@@ -49,7 +49,6 @@ var view = {
 	    $('.user-term-inputs').append(inputHtml)
 	    $('input').focus()
 	    controller.termButtonClicked()
-	    // searchTermCounter++
 	},
 
 	displayBadLibHeader: () => {
@@ -68,8 +67,8 @@ var view = {
 		var terms = randomBadLib[sentenceCounter].searchedTerms[0].term
 		console.log("gifs: " + gifs)
 		console.log("terms: " + terms)
-		var nextSentenceButton = "<div class='cell small-6 float-center'><button class='clear button next-sentence-button'>next Sentence in Bad Lib</button></div>"
-		var playGameAgain = "<div class='cell small-6 float-center'><button class='clear button play-again-button'>Play Again?</button></div>"
+		var nextSentenceButton = "<div class='cell small-6 float-center'><button class='hollow button next-sentence-button'>next Sentence in Bad Lib</button></div>"
+		var playGameAgain = "<div class='cell small-6 float-center'><button class='hollow button play-again-button'>Play Again?</button></div>"
 		$('.bad-lib-display').append(badLibSentence);
 		if ( sentenceCounter < randomBadLib.length-1 ) {
 			$('.bad-lib-display').append(nextSentenceButton)
