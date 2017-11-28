@@ -1,6 +1,8 @@
 /* 
 	This is where our own custom CSS will live 
 	in case we need to overwrite the CSS Framework we use
+*/
+
 
 body {
     background-color: #FFD700;
@@ -87,6 +89,7 @@ body {
 
 /* Diana Styling */
 /*body {
+>>>>>>> master
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/free-lined-paper-texture.jpg");
 	background-size: cover;
 	font-size: 30px;
