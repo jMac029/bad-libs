@@ -89,8 +89,8 @@ var badLibsArray = [
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'><span class='gif' id='term0' data='animal'></span> get to know one another by <span class='gif' id='term1' data='verb-ing'></span> through e-mail or talking on the <span class='gif' id='term2' data='noun'></span>.</div>",
-			termsToSearch: ["animal", "verb ending in -ing", "noun"],
+			sentence: "<div id='sentence'><span class='gif' id='term0' data='animal-plural'></span> get to know one another by <span class='gif' id='term1' data='verb-ing'></span> through e-mail or talking on the <span class='gif' id='term2' data='noun'></span>.</div>",
+			termsToSearch: ["animal plural", "verb ending in -ing", "noun"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
@@ -152,8 +152,8 @@ var badLibsArray = [
             searchedTerms: [{ term: [], gif: []}]
             },
             {
-            sentence: "<div id='sentence'>I know I’m not very attractive in my picture, but it was taken in <span class='gif' id='term0' data='year'></span>, and I have since become more <span class='gif' id='term1' data='adverb'></span>. </div>",
-            termsToSearch: ["year", "adverb"],
+            sentence: "<div id='sentence'>I know I’m not very attractive in my picture, but it was taken in <span class='gif' id='term0' data='year'></span>, and I have since become more <span class='gif' id='term1' data='adjective'></span>. </div>",
+            termsToSearch: ["year", "adjective"],
             searchedTerms: [{ term: [], gif: []}]
             }
         ]},
