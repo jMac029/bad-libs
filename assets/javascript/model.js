@@ -219,6 +219,30 @@ var badLibsArray = [
           termsToSearch: ["adjective"],
           searchedTerms: [{ term: [], gif: []}]
           }
+       ]},
+  
+        { title: "Late Nite TV Ad",
+            badLib: [
+            {
+            sentence: "<div id='sentence'>Is your <span class='gif' id='term0' data='noun'></span> making a mess of your <span class='gif' id='term1' data='place'></span>? Try <span class='gif' id='term2' data='silly-word'></span>! It will <span class='gif' id='term3' data='verb'></span> your whole <span class='gif' id='term4' data='noun'></span> and <span class='gif' id='term5' data='verb'></span> to unbelievable levels!</div>",
+            termsToSearch: ["noun", "place", "silly word", "verb", "noun", "verb"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>Watch, as we demonstrate, the <span class='gif' id='term0' data='adjective'></span> capabilities of this <span class='gif' id='term1' data='adverb'></span> product! Everyone should have at least <span class='gif' id='term2' data='number'></span> of these!</div>",
+            termsToSearch: ["adjective", "adverb", "number"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>To order, call the number on your screen. <span class='gif' id='term0' data='adjective'></span> phone attendants will <span class='gif' id='term1' data='adverb'></span> take your request. <span class='gif' id='term2' data='adjective'></span> and <span class='gif' id='term3' data='adjective'></span> service will be yours!</div>",
+            termsToSearch: ["adjective", "adverb", "adjective", "adjective"],
+            searchedTerms: [{ term: [], gif: []}]
+            },
+            {
+            sentence: "<div id='sentence'>Call within the next <span class='gif' id='term0' data='number'></span> <span class='gif' id='term1' data='time'></span>, and you will receive a <span class='gif' id='term2' data='adjective'></span>, <span class='gif' id='term3' data='adjective'></span>, <span class='gif' id='term4' data='adverb'></span> <span class='gif' id='term5' data='noun'></span> as a bonus, absolutely free for an additional value of <span class='gif' id='term6' data='number'></span> dollars, plus shipping and handling cost of <span class='gif' id='term7' data='number'></span> dollars. Act Now!!</div>",
+            termsToSearch: ["number", "measurement of time (minutes, seconds, hours, etc.)", "adjective", "adjective", "adverb", "noun", "number", "number"],
+            searchedTerms: [{ term: [], gif: []}]
+            }
         ]}
 
 ];

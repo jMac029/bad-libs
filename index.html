@@ -1,6 +1,17 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97014761-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-97014761-2');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,87 +31,90 @@
     <div class="grid-container">
       <div class="grid-y" medium-grid-frame">
         <div class='cell small-6 float-center header'>
-          <img id="logo" src="assets/images/badlibs.png" alt="Badlibs Logo" width="650">
+          <a href="index.html"><img id="logo" src="assets/images/badlibs.png" alt="Badlibs Logo" width="650"></a>
         </div>
         
-          <div class="welcome-screen"></div>
+        <div class="welcome-screen"></div>
         
-          <div class="user-term-inputs"></div>
+        <div class="user-term-inputs"></div>
 
-          <div class="cell small-6 float-center story-display">
-            <div class="cell small-6 float-center bad-lib-display"></div>
-          </div>
+        <div class="cell small-6 float-center story-display">
+          <div class="cell small-6 float-center bad-lib-display"></div>
+        </div>
+
 
         <div class='cell small-6 float-center nav'>
           <nav>
             <ul class="menu">
-              <li><p><button class="clear button float-center" data-open="how-to-modal">How to Play</button></p>
-</li>
-              <li><p><button class="clear button float-center" data-open="creator-modal">The Creators</button></p></li>
+              <li><p><button id="modal-button" class="clear button float-center" data-open="how-to-modal">How to Play</button></p>
+              </li>
+              <li><p><button id="modal-button" class="clear button float-center" data-open="creator-modal">The Creators</button></p></li>
             </ul>
           </nav>
         </div>
+
         <div class="sharethis-inline-share-buttons"></div>
       
       </div>
     </div>
 
-
-  <section class="modal-reveals">
+    
+    <!-- Modals -->
     
     <div class="reveal" id="how-to-modal" data-reveal>
-       <h1>How To Play</h1>
-      <ol>1. Autograph your masterpiece-to-be and click Enter</ol>
-      <ol>2. Type in a word as requested on the page and click Enter after each word. The more creative the better your lib will be!</ol>
-      <ol>3. Have the lib read out to you in an accent, laugh out loud, and share with others!</ol>
-      <button class="close-button" data-close aria-label="Close modal" type="button">
-      <span aria-hidden="true">&times;</span> 
-      </button>
-    </div>
+      <h3 id='modal-heading'>How To Play</h3>
+        <ol id= 'modal-content'>
+          <li>Autograph your masterpiece-to-be and click Enter.</li>
+          <li>Type in a word as requested on the page and click Enter after each word. The more creative the better your lib will be!</li>
+          <li>Have the lib read out to you in an accent, laugh out loud, and share with others!</li>
+        </ol>
 
-    
+      <button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
 
-    <div class="reveal" id="creator-modal" data-reveal>
-      <h3>Creators of Bad Libs!</h3>
-      <div class="grid-x grid-margin-x grid-margin-y small-up-2 medium-up-4">
-    
-        <div class="cell"><img src="http://via.placeholder.com/150x150" alt="Photo of Diana White">
-              <p>Diana Whiter</p>
-              <a href="https://github.com/dianachriswhite">@dianachriswhite</a>
-        </div>
-
-        <div class="cell"><img src="assets/images/elle.png" alt="Photo of Elle Bang" height="150px">
-              <p>Elle Bang</p>
-              <a href="https://github.com/ellemin">@ellemin</a>
-        </div>
-        
-         <div class="cell"><img src="assets/images/james.jpg" alt="Photo of James M">
-              <p>James McMillan</p>
-              <a href="https://github.com/jMac029">@jMac029</a>
-        </div>
-
-         <div class="cell"><img src="http://via.placeholder.com/150x150" alt="Photo of Lauren Spinazze">
-              <p>Lauren Spinazze</p>
-              <a href="https://github.com/lvspinazze">@lvspinazze</a>
-        </div>
-        
-      </div>
-      <button class="close-button" data-close aria-label="Close modal" type="button">
-      <span aria-hidden="true">&times;</span> 
-      </button>
-    </div>
-
-    
-
-  </section>
-
-
-  
-        <!-- ResponsiveVoiceJS code -->
+     <!-- ResponsiveVoiceJS code -->
       <div class="cell small-6 float-center data-sticky-container footer">
         <div class="cell small-6 float-center data-stick-to='bottom'">
-          <a href="https://responsivevoice.org">ResponsiveVoice-NonCommercial</a> licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech" src="https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png" alt="95x15" width="95" height="15" /></div>
+          <a href="https://responsivevoice.org">ResponsiveVoice-NonCommercial</a> licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech" src="https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png" alt="95x15" width="95" height="15" /></a></div>
       </div>
+
+    </div>
+
+    <div class="reveal" id="creator-modal" data-reveal>
+      <h3 id='modal-heading'>Creators of Bad Libs!</h3>
+      
+      <div class="grid-x grid-margin-x grid-margin-y small-up-2 medium-up-4">
+        
+        <div class="cell">
+          <img id="modal-image" src="assets/images/diana.png" alt="Photo of Diana White">
+          <p>Diana White</p>
+          <a id="modal-link" href="https://github.com/dianachriswhite">@dianachriswhite</a>
+        </div>
+
+        <div class="cell">
+          <img id="modal-image" src="assets/images/elle.jpg" alt="Photo of Elle Bang" height="150px">
+          <p>Elle Bang</p>
+          <a id="modal-link" href="https://github.com/ellemin">@ellemin</a>
+        </div>
+        
+        <div class="cell">
+          <img id="modal-image" src="assets/images/james.JPG" alt="Photo of James McMillan" height="150px">
+          <p>James McMillan</p>
+          <a id="modal-link" href="https://github.com/jMac029">@jMac029</a>
+        </div>
+
+        <div class="cell">
+          <img id="modal-image" src="assets/images/lauren.png" alt="Photo of Lauren Spinazze">
+          <p>Lauren Spinazze</p>
+          <a id="modal-link" href="https://github.com/lvspinazze">@lvspinazze</a>
+        </div>
+    
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span> 
+      </button>
+
+      </div>
+  </div>
+
 
     <script type="text/javascript" src="assets/javascript/vendor/jquery.js"></script>
     <script type="text/javascript" src="assets/javascript/vendor/what-input.js"></script>
