@@ -63,7 +63,7 @@ body {
 
 .bad-lib-display {
   text-align: center;
-  line-height: 260px;
+  line-height: 60px;
 }
 
 #story-title {
@@ -86,7 +86,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   color: #696969;
   font-size: 48px;
-  border-bottom: 500px;
+
 }
 
 .gif {
