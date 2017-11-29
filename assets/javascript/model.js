@@ -74,7 +74,7 @@ var badLibsArray = [
           termsToSearch: ["adjective", "adjective"],
           searchedTerms: [{ term: [], gif: []}]
           }
-      ]},
+      	]},
 
 		{ title: "Online Dating",
 			badLib: [

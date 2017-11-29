@@ -16,8 +16,8 @@ var view = {
 			"<div class='cell medium-10 text-center'>" +
 				"<form>" +
 	                "<div class='cell small-6 float-center'>" +
-	                  "<label for='author-input' id='author-question'>What is your name?</label>" +
-	                  "<input type='text' class='cell small-6 float-center' id='author-input' autofocus/>" +
+	                  	"<label for='author-input' id='author-question'>What is your name?</label>" +
+	                  	"<input type='text' class='cell small-6 float-center' id='author-input' autofocus/>" +
 	                "</div>" +
 	              	"<button class='clear button' id='start-badlib-button'>Begin Your Story</button>" +
 	            "<form>" +
