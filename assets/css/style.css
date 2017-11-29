@@ -9,6 +9,7 @@ body {
     color: white;
 }
 
+
 /*transparent input field*/
 #author-input, #word-input {
   font-family: 'Crafty Girls', cursive;
@@ -26,7 +27,7 @@ body {
 
 #author-question, #term-question {
   font-family: 'Heebo', sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   color: #00BFFF;
 }
 
@@ -34,13 +35,22 @@ body {
   font-family: 'Heebo', sans-serif;
   font-size: 16px;
   color: #C0C0C0;
-
 }
 
 #start-badlib-button {
   font-family: 'Heebo', sans-serif;
   color: white;
-  font-size: 16px;
+  font-size: 22px;
+}
+
+#modal-button { 
+  font-family: 'Heebo', sans-serif;
+  background: #C0C0C0;
+  color: white;
+  font-size: 12px;
+  border: 0.5px solid #C0C0C0;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .input-term-button, .all-done-button, .next-sentence-button {
@@ -71,17 +81,45 @@ body {
   padding-bottom: 50px;
 }
 
-#how-to-modal {
-  color: black;
-  background-color: #5F9EA0;
-  
+#how-to-modal, #creator-modal {
+  font-family: 'Heebo', sans-serif;
+  color: #696969; 
+}
+
+#modal-heading {
+  color: #00BFFF;
+  padding-bottom: 15px;
+}
+
+#modal-content {
+  margin: 0px 20px 0px 20px;
+}
+
+#modal-image {
+  border-radius: 10px;
+}
+
+#modal-link {
+  color: #00BFFF;
+  margin: none;
+}
+
+.data-sticky-container {
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.bad-lib-modal-button {
+  font-family: 'Heebo', sans-serif;
+  background-color:  #F8F9F9; 
 }
 
 .header, .nav, .footer{
   text-align: center;
   
 }
-.header, .nav, .footer {
+
+.story-display, .bad-lib-display {
 	text-align: center;
 }
 
@@ -91,7 +129,6 @@ body {
 
 /* Diana Styling */
 /*body {
->>>>>>> master
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/free-lined-paper-texture.jpg");
 	background-size: cover;
 	font-size: 30px;
