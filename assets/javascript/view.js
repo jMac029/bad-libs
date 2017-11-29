@@ -58,15 +58,15 @@ var view = {
 	},
 
 	displayBadLib: () => {
-		console.log("sentenceCounter: " + sentenceCounter)
+		//console.log("sentenceCounter: " + sentenceCounter)
 		$('.user-term-inputs').hide()
 		var badLibSentence = randomBadLib[sentenceCounter].sentence
-		console.log("badLibSentence: " + badLibSentence)
+		//console.log("badLibSentence: " + badLibSentence)
     
 		var gifs = randomBadLib[sentenceCounter].searchedTerms[0].gif
 		var terms = randomBadLib[sentenceCounter].searchedTerms[0].term
-		console.log("gifs: " + gifs)
-		console.log("terms: " + terms)
+		//console.log("gifs: " + gifs)
+		//console.log("terms: " + terms)
 		var nextSentenceButton = "<div class='cell small-6 float-center'><button class='clear button next-sentence-button' id='next-button'>Reveal Next Line</button></div>"
 		var playGameAgain = "<div class='cell small-6 float-center'><button class='clear button play-again-button' id='next-button'>Play Again?</button></div>"
 		$('.bad-lib-display').append(badLibSentence);
@@ -80,7 +80,7 @@ var view = {
 		}
 		for (var i = 0; i < gifs.length; i++) {
 			var gifImage = $('<img>')
-			console.log(gifImage)
+			//console.log(gifImage)
 			gifImage.attr("src", gifs[i].images.fixed_height.url)
 			gifImage.attr("title", terms[i])
 			//gifImage.text(terms[i]);

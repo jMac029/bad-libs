@@ -15,7 +15,7 @@ var controller = {
 			if (authorName == "") {
 				authorName = "An Author has no name"
 			}
-			console.log(authorName)
+			//console.log(authorName)
 			controller.selectRandomBadLib()
 			controller.loopTermsToSearchForInput()
 		});
@@ -30,11 +30,11 @@ var controller = {
 				randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 				var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 		        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg-13&limit=12"
-		      	console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term)
+		      	//console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term)
 			    searchTermCounter++
-			    console.log("searchTermCounter: " + searchTermCounter)
+			    //console.log("searchTermCounter: " + searchTermCounter)
 			    termCounter++
-			    console.log("termCounter: " + termCounter)
+			    //console.log("termCounter: " + termCounter)
 
 
 				$.ajax({
@@ -44,10 +44,10 @@ var controller = {
 					// declare JSON output into a results variable for easier use
 					var giphyResults = giphyResponse.data
 					// console log the results
-					console.log(giphyResults)
+					//console.log(giphyResults)
 					var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
 					randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif)
-					console.log(randomBadLib[badLibIndex].searchedTerms[0].gif)
+					//console.log(randomBadLib[badLibIndex].searchedTerms[0].gif)
 					controller.loopTermsToSearchForInput()
 		      	})	
 			} else {
@@ -55,11 +55,11 @@ var controller = {
 				randomBadLib[badLibIndex].searchedTerms[0].term.push(searchWord)
 				var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 		        searchWord + "&api_key=oXTcsygddx6gGqHTrnCdyGto2t9XZfy6&rating=pg-13&limit=12"
-		      	console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term)
+		      	//console.log("term: " + randomBadLib[badLibIndex].searchedTerms[0].term)
 			    searchTermCounter++
-			    console.log("searchTermCounter: " + searchTermCounter)
+			    //console.log("searchTermCounter: " + searchTermCounter)
 			    termCounter++
-			    console.log("termCounter: " + termCounter)
+			    //console.log("termCounter: " + termCounter)
 
 
 				$.ajax({
@@ -69,10 +69,10 @@ var controller = {
 					// declare JSON output into a results variable for easier use
 					var giphyResults = giphyResponse.data
 					// console log the results
-					console.log(giphyResults)
+					//console.log(giphyResults)
 					var randomGif = giphyResults[Math.floor(Math.random() * giphyResults.length)]
 					randomBadLib[badLibIndex].searchedTerms[0].gif.push(randomGif)
-					console.log(randomBadLib[badLibIndex].searchedTerms[0].gif)
+					//console.log(randomBadLib[badLibIndex].searchedTerms[0].gif)
 					controller.loopTermsToSearchForInput()
 		      	})
 
@@ -83,18 +83,18 @@ var controller = {
 	selectRandomBadLib: () => {
 		chosenBadLib = badLibsArray[Math.floor(Math.random() * badLibsArray.length)]
 		randomBadLib = chosenBadLib.badLib
-		console.log(randomBadLib)
+		//console.log(randomBadLib)
 
 		for (var i = 0; i < randomBadLib.length; i++) {
 			allTermsCounter = randomBadLib[i].termsToSearch.length + allTermsCounter
 		}
-		console.log("allTermsCounterTOTAL")
-		console.log(allTermsCounter)
+		//console.log("allTermsCounterTOTAL")
+		//console.log(allTermsCounter)
 	},
 
 	loopTermsToSearchForInput: () => {
 		var searchTerms = randomBadLib[badLibIndex].termsToSearch
-		console.log(searchTerms)
+		//console.log(searchTerms)
 
 		if (searchTermCounter < searchTerms.length) {
 			view.displayTermInputs(searchTerms[searchTermCounter])
@@ -118,7 +118,7 @@ var controller = {
 			$('.bad-lib-display').empty()
 			$('#sentence').empty()
 			sentenceCounter++
-			console.log("sentenceCounter: " + sentenceCounter)
+			//console.log("sentenceCounter: " + sentenceCounter)
 			// searchTermCounter = 0
 			view.displayBadLib()
 		})
