@@ -184,41 +184,41 @@ var badLibsArray = [
 
         { title: "The Latest Dance Craze",
         badLib: [
-          {
-          sentence: "<div id='sentence'>Have you heard about the <span class='gif' id='term0' data='adjective'></span> dance craze sweeping (the) <span class='gif' id='term1' data='place'></span>? It's called The <span class='gif' id='term2' data='person-in-room'></span>!</div>",
-          termsToSearch: ["adjective", "place", "person in room"],
-          searchedTerms: [{ term: [], gif: []}]
-          },
-          {
-          sentence: "<div id='sentence'> Slip on your <span class='gif' id='term0' data='verb-ing'></span> shoes, turn up the speakers on your i-<span class='gif' id='term1' data='noun'></span>, and let's master the moves that put this <span class='gif' id='term2' data='adjective'></span> dance on the map: </div>",
-          termsToSearch: ["verb ending in -ing", "noun", "adjective"],
-          searchedTerms: [{ term: [], gif: []}]
-          },
-          {
-          sentence: "<div id='sentence'>Put your hands on your <span class='gif' id='term0' data='body-part-plural'></span>, stomp your <span class='gif' id='term1' data='body-part'></span>, and strike a <span class='gif' id='term2' data='adjective'></span> pose.</div>",
-          termsToSearch: ["body part plural", "body part", "adjective"],
-          searchedTerms: [{ term: [], gif: []}]
-          },
-          {
-          sentence: "<div id='sentence'>Take <span class='gif' id='term0' data='number'></span> <span class='gif' id='term1' data='adjective'></span> steps to the left, spin <span class='gif' id='term2' data='adverb'></span>, then take <span class='gif' id='term3' data='number'></span> <span class='gif' id='term4' data='adjective'></span> steps to the right. </div>",
-          termsToSearch: ["number", "adjective", "adverb", "number", "adjective"],
-          searchedTerms: [{ term: [], gif: []}]
-          },
-          {
-          sentence: "<div id='sentence'>Throw your <span class='gif' id='term0' data='body-part'></span> into the air and sway your <span class='gif' id='term1' data='plural-noun'></span> from side to side.</div>",
-          termsToSearch: ["body part", "plural noun"],
-          searchedTerms: [{ term: [], gif: []}]
-          },
-          {
-          sentence: "<div id='sentence'>For the big finish, stick out your <span class='gif' id='term0' data='body-part'></span> and wiggle it <span class='gif' id='term1' data='adverb'>.</div>",
-          termsToSearch: ["body part", "adverb"],
-          searchedTerms: [{ term: [], gif: []}]
-          },
-          {
-          sentence: "<div id='sentence'>Repeat all of these <span class='gif' id='term0' data='adjective'></span> steps until the song is over.</div>",
-          termsToSearch: ["adjective"],
-          searchedTerms: [{ term: [], gif: []}]
-          }
+	        {
+	        sentence: "<div id='sentence'>Have you heard about the <span class='gif' id='term0' data='adjective'></span> dance craze sweeping (the) <span class='gif' id='term1' data='place'></span>? It's called The <span class='gif' id='term2' data='person-in-room'></span>!</div>",
+	        termsToSearch: ["adjective", "place", "person in room"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        },
+	        {
+	        sentence: "<div id='sentence'> Slip on your <span class='gif' id='term0' data='verb-ing'></span> shoes, turn up the speakers on your i-<span class='gif' id='term1' data='noun'></span>, and let's master the moves that put this <span class='gif' id='term2' data='adjective'></span> dance on the map: </div>",
+	        termsToSearch: ["verb ending in -ing", "noun", "adjective"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        },
+	        {
+	        sentence: "<div id='sentence'>Put your hands on your <span class='gif' id='term0' data='body-part-plural'></span>, stomp your <span class='gif' id='term1' data='body-part'></span>, and strike a <span class='gif' id='term2' data='adjective'></span> pose.</div>",
+	        termsToSearch: ["body part plural", "body part", "adjective"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        },
+	        {
+	        sentence: "<div id='sentence'>Take <span class='gif' id='term0' data='number'></span> <span class='gif' id='term1' data='adjective'></span> steps to the left, spin <span class='gif' id='term2' data='adverb'></span>, then take <span class='gif' id='term3' data='number'></span> <span class='gif' id='term4' data='adjective'></span> steps to the right. </div>",
+	        termsToSearch: ["number", "adjective", "adverb", "number", "adjective"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        },
+	        {
+	        sentence: "<div id='sentence'>Throw your <span class='gif' id='term0' data='body-part'></span> into the air and sway your <span class='gif' id='term1' data='plural-noun'></span> from side to side.</div>",
+	        termsToSearch: ["body part", "plural noun"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        },
+	        {
+	        sentence: "<div id='sentence'>For the big finish, stick out your <span class='gif' id='term0' data='body-part'></span> and wiggle it <span class='gif' id='term1' data='adverb'>.</div>",
+	        termsToSearch: ["body part", "adverb"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        },
+	        {
+	        sentence: "<div id='sentence'>Repeat all of these <span class='gif' id='term0' data='adjective'></span> steps until the song is over.</div>",
+	        termsToSearch: ["adjective"],
+	        searchedTerms: [{ term: [], gif: []}]
+	        }
        	]},
   
         { title: "Late Nite TV Ad",
