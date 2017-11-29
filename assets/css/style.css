@@ -90,8 +90,14 @@ body {
 }
 
 .gif {
-  vertical-align: text-bottom;
   border: none;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
 }
 
 #logo {
