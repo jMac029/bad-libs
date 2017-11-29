@@ -21,36 +21,60 @@ var badLibsArray = [
 		{ title: "In The News",
 		  badLib: [
 			{
-			sentence: "<div id='sentence'>A <span class='gif' id='term0' data='animal'></span> in Kentucky was arrested this morning after he <span class='gif' id='term1' data='adverb'></span> in front of a house.</div>",
-			termsToSearch: ["animal", "adverb"],
+			sentence: "<div id='sentence'><span class='gif' id='term0' data='male-celebrity'></span> was arrested in <span class='gif' id='term1' data='state'></span> this morning after it was revealed that he <span class='gif' id='term2' data='verb-past-tense'></span> in front of <span class='gif' id='term3' data='landmark'></span> late last night.</div>",
+			termsToSearch: ["male celebrity", "state", "past tense verb", "landmark or monument"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'> <span class='gif' id='term0' data='celebrity'></span> had a history of <span class='gif' id='term1' data='verb'></span>, but no one, not even his or her <span class='gif' id='term2' data='noun'></span> - ever imagined he or she had <span class='gif' id='term3' data='verb'></span> with a <span class='gif' id='term4' data='noun'></span> stuck in his or her <span class='gif' id='term5' data='body-part'></span>.</div>",
-			termsToSearch: ["celebrity", "verb", "noun", "verb", "noun", "body part"],
+			sentence: "<div id='sentence'> Sure he has a history of <span class='gif' id='term0' data='verb-ing'></span>, but no one, not even his <span class='gif' id='term1' data='family-member'></span> - ever imagined he would <span class='gif' id='term2' data='verb'></span> with a <span class='gif' id='term3' data='noun'></span> stuck in his <span class='gif' id='term4' data='body-part'></span>.</div>",
+			termsToSearch: ["verb ending in -ing", "family member", "verb", "noun", "body part"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'>I always thought he or she was <span class='gif' id='term0' data='adjective'></span>, but I never thought he or she would do something like this. Even his or her <span class='gif' id='term1' data='family-member'></span> was surprised.</div>",
-			termsToSearch: ["adjective", "family-member"],
+			sentence: "<div id='sentence'>After stopping for a quick <span class='gif' id='term0' data='noun'></span>, cops followed him to a <span class='gif' id='term1' data='fast-food-restaurant'></span>, where he reportedly <span class='gif' id='term2' data='verb-past-tense'></span> in the deep fryer.</div>",
+			termsToSearch: ["noun", "fast food restaurant", "past tense verb"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'>After a brief <span class='gif' id='term0' data='verb-ing'></span>, cops followed him or her to a <span class='gif' id='term1' data='fast-food-restaurant'></span>, where he or she reportedly <span class='gif' id='term2' data='adverb'></span> in the deep fryer.</div>",
-			termsToSearch: ["verb ending in -ing", "fast food restaurant", "adverb"],
+			sentence: "<div id='sentence'>In <span class='gif' id='term0' data='year'></span>, a woman was charged with a similar crime when she <span class='gif' id='term1' data='verb-past-tense'></span> in front of the White House with a <span class='gif' id='term2' data='noun'></span> in her <span class='gif' id='term3' data='body-part'></span>.</div>",
+			termsToSearch: ["year", "past tense verb", "noun", "body part"],
 			searchedTerms: [{ term: [], gif: []}]
 			},
 			{
-			sentence: "<div id='sentence'>In <span class='gif' id='term0' data='month'></span>, a woman was charged with a similar crime. But rather than <span class='gif' id='term1' data='verb'></span>, a with a <span class='gif' id='term2' data='noun'></span>, she <span class='gif' id='term3' data='verb-past-tense'></span> with a <span class='gif' id='term4' data='adverb'></span> dog.</div>",
-			termsToSearch: ["month", "verb", "noun", "past tense verb", "adverb"],
-			searchedTerms: [{ term: [], gif: []}]
-			},
-			{
-			sentence: "<div id='sentence'>Either way, we imagine that after witnessing him <span class='gif' id='term0' data='verb'></span> with a <span class='gif' id='term1' data='noun'></span> there are probably a whole lot of <span class='gif' id='term2' data='plural-noun'></span> that are going to need some therapy.</div>",
-			termsToSearch: ["verb", "noun", "plural noun"],
+			sentence: "<div id='sentence'>Either way, he is going to need a <span class='gif' id='term0' data='adjective'></span> lawyer to get him out of this <span class='gif' id='term1' data='adjective'></span> situation.</div>",
+			termsToSearch: ["adjective", "adjective"],
 			searchedTerms: [{ term: [], gif: []}]
 			}
-		]},
+        ]},
+
+        { title: "Local News",
+        badLib: [
+          {
+          sentence: "<div id='sentence'><span class='gif' id='term0' data='female-celebrity'></span> was arrested in <span class='gif' id='term1' data='state'></span> this morning after it was revealed that she <span class='gif' id='term2' data='verb-past-tense'></span> in front of <span class='gif' id='term3' data='landmark'></span> late last night.</div>",
+          termsToSearch: ["female celebrity", "state", "past tense verb", "landmark or monument"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'> Sure she has a history of <span class='gif' id='term0' data='verb-ing'></span>, but no one, not even her <span class='gif' id='term1' data='family-member'></span> - ever imagined she would <span class='gif' id='term2' data='verb'></span> with a <span class='gif' id='term3' data='noun'></span> stuck in her <span class='gif' id='term4' data='body-part'></span>.</div>",
+          termsToSearch: ["verb ending in -ing", "family member", "verb", "noun", "body part"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>After stopping for a quick <span class='gif' id='term0' data='noun'></span>, police followed her to a <span class='gif' id='term1' data='fast-food-restaurant'></span>, where she reportedly <span class='gif' id='term2' data='verb-past-tense'></span> in the deep fryer.</div>",
+          termsToSearch: ["noun", "fast food restaurant", "past tense verb"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>In <span class='gif' id='term0' data='year'></span>, a woman was charged with a similar crime when she <span class='gif' id='term1' data='verb-past-tense'></span> in front of the White House with a <span class='gif' id='term2' data='noun'></span> in her <span class='gif' id='term3' data='body-part'></span>.</div>",
+          termsToSearch: ["year", "past tense verb", "noun", "body part"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>Either way, she is going to need a <span class='gif' id='term0' data='adjective'></span> lawyer to get her out of this <span class='gif' id='term1' data='adjective'></span> situation.</div>",
+          termsToSearch: ["adjective", "adjective"],
+          searchedTerms: [{ term: [], gif: []}]
+          }
+      ]},
 
 		{ title: "Online Dating",
 			badLib: [
@@ -156,6 +180,45 @@ var badLibsArray = [
             termsToSearch: ["adjective", "body part", "verb"],
             searchedTerms: [{ term: [], gif: []}]
             }
+        ]},
+
+        { title: "The Latest Dance Craze",
+        badLib: [
+          {
+          sentence: "<div id='sentence'>Have you heard about the <span class='gif' id='term0' data='adjective'></span> dance craze sweeping (the) <span class='gif' id='term1' data='place'></span>? It's called The <span class='gif' id='term2' data='person-in-room'></span>!</div>",
+          termsToSearch: ["adjective", "place", "person in room"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'> Slip on your <span class='gif' id='term0' data='verb-ing'></span> shoes, turn up the speakers on your i-<span class='gif' id='term1' data='noun'></span>, and let's master the moves that put this <span class='gif' id='term2' data='adjective'></span> dance on the map: </div>",
+          termsToSearch: ["verb ending in -ing", "noun", "adjective"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>Put your hands on your <span class='gif' id='term0' data='body-part-plural'></span>, stomp your <span class='gif' id='term1' data='body-part'></span>, and strike a <span class='gif' id='term2' data='adjective'></span> pose.</div>",
+          termsToSearch: ["body part plural", "body part", "adjective"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>Take <span class='gif' id='term0' data='number'></span> <span class='gif' id='term1' data='adjective'></span> steps to the left, spin <span class='gif' id='term2' data='adverb'></span>, then take <span class='gif' id='term3' data='number'></span> <span class='gif' id='term4' data='adjective'></span> steps to the right. </div>",
+          termsToSearch: ["number", "adjective", "adverb", "number", "adjective"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>Throw your <span class='gif' id='term0' data='body-part'></span> into the air and sway your <span class='gif' id='term1' data='plural-noun'></span> from side to side.</div>",
+          termsToSearch: ["body part", "plural noun"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>For the big finish, stick out your <span class='gif' id='term0' data='body-part'></span> and wiggle it <span class='gif' id='term1' data='adverb'>.</div>",
+          termsToSearch: ["body part", "adverb"],
+          searchedTerms: [{ term: [], gif: []}]
+          },
+          {
+          sentence: "<div id='sentence'>Repeat all of these <span class='gif' id='term0' data='adjective'></span> steps until the song is over.</div>",
+          termsToSearch: ["adjective"],
+          searchedTerms: [{ term: [], gif: []}]
+          }
         ]}
 
 ];
