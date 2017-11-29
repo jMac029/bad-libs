@@ -93,13 +93,6 @@ body {
   border: none;
 }
 
-img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-}
-
 #logo {
   padding-bottom: 50px;
 }
