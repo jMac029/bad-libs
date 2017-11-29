@@ -40,7 +40,7 @@ var view = {
 				"<input type='text' class='cell small-6 float-center' id='word-input' autofocus/>" +
 				"</div>" +
 				"<!-- Submit Button -->" +
-				"<button class='input-term-button clear button'>enter</button>" +
+				"<button class='input-term-button clear button' id='start-badlib-button'>Enter Next Word</button>" +
 				//"<p id='counter'> word " + wordCounter + " of " + allTermsCounter + "</p>" +
 			"</form>" +
 			"</div>"
@@ -67,8 +67,8 @@ var view = {
 		var terms = randomBadLib[sentenceCounter].searchedTerms[0].term
 		console.log("gifs: " + gifs)
 		console.log("terms: " + terms)
-		var nextSentenceButton = "<div class='cell small-6 float-center'><button class='hollow button next-sentence-button'>next Sentence in Bad Lib</button></div>"
-		var playGameAgain = "<div class='cell small-6 float-center'><button class='hollow button play-again-button'>Play Again?</button></div>"
+		var nextSentenceButton = "<div class='cell small-6 float-center'><button class='clear button next-sentence-button' id='next-button'>Reveal Next Line</button></div>"
+		var playGameAgain = "<div class='cell small-6 float-center'><button class='clear button play-again-button' id='next-button'>Play Again?</button></div>"
 		$('.bad-lib-display').append(badLibSentence);
 		if ( sentenceCounter < randomBadLib.length-1 ) {
 			$('.bad-lib-display').append(nextSentenceButton)
