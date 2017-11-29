@@ -1,6 +1,6 @@
 /* 
-	This is where our own custom CSS will live 
-	in case we need to overwrite the CSS Framework we use
+  This is where our own custom CSS will live 
+  in case we need to overwrite the CSS Framework we use
 */
 
 
@@ -27,20 +27,28 @@ body {
 
 #author-question, #term-question {
   font-family: 'Heebo', sans-serif;
-  font-size: 36px;
+  font-size: 48px;
   color: #00BFFF;
 }
 
 #word-question {
   font-family: 'Heebo', sans-serif;
-  font-size: 16px;
+  font-size: 28px;
   color: #C0C0C0;
 }
 
 #start-badlib-button {
   font-family: 'Heebo', sans-serif;
   color: white;
-  font-size: 22px;
+  font-size: 36px;
+}
+
+#next-button {
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  font-size: 36px;
+  margin: 50px;
+  text-align: center;
 }
 
 #modal-button { 
@@ -53,28 +61,37 @@ body {
   margin: 10px;
 }
 
-.input-term-button, .all-done-button, .next-sentence-button {
-  font-family: 'Heebo', sans-serif;
-  color: #C0C0C0;
-  font-size: 16px;
+.bad-lib-display {
+  text-align: center;
+  line-height: 260px;
 }
 
 #story-title {
   font-family: 'Heebo', sans-serif;
   color: #00BFFF;
-  font-size: 42px;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 #story-author {
   font-family: 'Heebo', sans-serif;
-  color: #00BFFF;
-  font-size: 18px;
+  color: #C0C0C0;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #sentence {
   font-family: 'Work Sans', sans-serif;
   color: #696969;
   font-size: 48px;
+  border-bottom: 500px;
+}
+
+.gif {
+  vertical-align: text-bottom;
+  border: none;
 }
 
 #logo {
@@ -115,34 +132,26 @@ body {
 }
 
 .header, .nav, .footer{
-  text-align: center;
-  
-}
-
-.story-display, .bad-lib-display {
-	text-align: center;
-}
-
-.story-display, .bad-lib-display {
-	text-align: center;
+  text-align: center; 
 }
 
 /* Diana Styling */
 /*body {
+>>>>>>> master
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/free-lined-paper-texture.jpg");
-	background-size: cover;
-	font-size: 30px;
+  background-size: cover;
+  font-size: 30px;
 }*/
 
 /*row:first-of-type*/
 #first {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #sans-serif {
-	font-family: 'Heebo', sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 #cursive {font-family: 'Crafty Girls', cursive;}
